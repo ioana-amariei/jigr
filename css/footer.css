@@ -1,7 +1,7 @@
 .footer {
     position: absolute;
     bottom: 0px;
-    width: 100%;
+    width: 99%;
     height: 5%;
     display: grid;
     grid-template-columns: 10% 70% 10% 10%;
@@ -13,7 +13,27 @@
 .footer__logo {
     align-self: center;
     justify-self: center;
+    animation: logo-animation 5s linear infinite;
+}
+
+@keyframes logo-animation {
+    0% {
+        transform: rotate(0deg) scale(0);
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(0);
+    }
+}
+
+.footer__logo:hover {
     transform: rotate(45deg);
+}
+
+.footer__logo:active {
+    transform: scale(1.5);
 }
 
 .footer__text {
