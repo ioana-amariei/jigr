@@ -1,4 +1,4 @@
-# JigR
+# jigr
 Jigsaw Web Manager
 
 
