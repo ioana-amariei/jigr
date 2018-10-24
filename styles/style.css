@@ -4,7 +4,7 @@
 
 
 
-/**************** Header Style ****************/
+/**************** Header Style ****************
 .header{
     position: absolute;
     bottom: 0px;
@@ -40,6 +40,9 @@
 .header__menu li a:hover {
     background-color: gray;
 }
+
+*/ 
+
 /**********************************************/
 
 
@@ -52,19 +55,28 @@
 /**************************************************/
 
 /***************** Footer style *****************/
-.footer {
-    position: absolute;
-    bottom: 0px;
-    width: 99%;
-    height: 5%;
+.container {
     display: grid;
-    grid-template-columns: 10% 70% 10% 10%;
-    grid-template-rows: 1fr;
-    background-color: #34495e;
-    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20fr 1fr;
+    height: 100%;
 }
 
-.footer__logo {
+.canvas__container {
+    display: grid;
+    background-color:  #ebf5fb ;
+}
+
+.nav__container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    bottom: 0px;
+    background-color: #212f3c;
+}
+
+.logo {
+    grid-column: 1/2;
     align-self: center;
     justify-self: center;
     animation: logo-animation 5s linear infinite;
@@ -90,25 +102,56 @@
     transform: scale(1.5);
 }
 
-.footer__text {
-    font-size: 1.2em;
-    text-align: center;
+.progress {
+    grid-column: 2/3;
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+#progress__bar {
+    width: 10%;
+    border-radius: 15px;
+    padding: 10px 0px;
+    background-color: darkseagreen;
+}
+button {
+    border: none;
+    background-color: #212f3c;
+}
+
+.play {
+    grid-column: 3/4;
     color: white;
-    letter-spacing: 3px;
-    align-self: center;
-    justify-self:start;
 }
 
-.footer__facebook {
-    justify-self: end;
-    padding: 5px 5px 5px 5px;
+.solve {
+    grid-column: 4/5;
+    color: white;
 }
 
-.footer__twitter {
-    justify-self: start;
-    padding: 5px 5px 5px 5px;
+.reset {
+    grid-column: 5/6;
+    color: white;
 }
 
+.load {
+    grid-column: 6/7;
+    color: white;
+}
+
+.save {
+    grid-column: 7/8;
+    color: white;
+}
+
+.slider {
+    grid-column: 8/9;
+    padding: 18px 0px;
+}
 .footer__github {
     justify-self: center; 
     padding: 5px 5px 5px 5px; 
