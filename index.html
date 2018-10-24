@@ -4,28 +4,28 @@
     <link rel="shortcut icon" type="image/png" href="images/jigr.ico" />
     <title>jigr</title>
 
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
-    <!-- Start Lucian -->
-    <header></header>
-    <!-- End Lucian -->
+    <div class="container">
 
-    <!-- To be decided how we split content -->
-    <main></main>
+        <main class="canvas__container"></main>
 
-    <!-- Start Ioana -->
-    <footer class="footer">
-        <img class="footer__logo" src="images/jigr.ico" alt="jigr logo">
-        <div class="footer__text">&copy;2018 Jigsaw Web Manager</div>
-        <img class="footer__facebook" src="images/facebook-logo.ico" alt="facebook logo">
-        <img class="footer__twitter" src="images/twitter-logo.ico" alt="twitter logo">
-    </footer>
-    <!-- End Ioana -->
+        <nav class="nav__container">
+            <img class="logo" src="images/jigr.ico" alt="logo">
+            <div class="progress">
+                    <div id="progress__bar"></div>
+                </div>
+            <button class="play" type="button">Play</button>
+            <button class="solve" type="button">Solve piece</button>
+            <button class="reset" type="button">Reset</button>
+            <button class="load" type="button">Load</button>
+            <button class="save" type="button">Save</button>
+            <input class="slider" type="range" min="1" max="10" value="5">
+        </nav>
+
+    </div>
 
 </body>
 
