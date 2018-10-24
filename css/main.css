@@ -1,0 +1,120 @@
+/*  */
+
+
+
+
+
+/**************** Header Style ****************/
+.header{
+    position: absolute;
+    bottom: 0px;
+    width: 99%;
+    height: 5%;
+    display: grid;
+    grid-template-columns: 10% 70% 10% 10%;
+    grid-template-rows: 1fr;
+    background-color: #34495e;
+    align-items: center;
+}
+
+.header__menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #34495e;
+}
+
+.header__menu li {
+    float: right;
+}
+
+.header__menu li a {
+    display: block;
+    color: azure;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    background-color: gray;
+}
+/**********************************************/
+
+
+
+/***************** Main body style ****************/
+
+
+
+
+/**************************************************/
+
+/***************** Footer style *****************/
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 99%;
+    height: 5%;
+    display: grid;
+    grid-template-columns: 10% 70% 10% 10%;
+    grid-template-rows: 1fr;
+    background-color: #34495e;
+    align-items: center;
+}
+
+.footer__logo {
+    align-self: center;
+    justify-self: center;
+    animation: logo-animation 5s linear infinite;
+}
+
+@keyframes logo-animation {
+    0% {
+        transform: rotate(0deg) scale(0);
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(0);
+    }
+}
+
+.footer__logo:hover {
+    transform: rotate(45deg);
+}
+
+.footer__logo:active {
+    transform: scale(1.5);
+}
+
+.footer__text {
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+    align-self: center;
+    justify-self:start;
+}
+
+.footer__facebook {
+    justify-self: end;
+    padding: 5px 5px 5px 5px;
+}
+
+.footer__twitter {
+    justify-self: start;
+    padding: 5px 5px 5px 5px;
+}
+
+.footer__github {
+    justify-self: center; 
+    padding: 5px 5px 5px 5px; 
+    width:25px;
+    height:25px;
+}
+
+
+/**********************************************/
