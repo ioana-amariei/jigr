@@ -1,22 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ioana Birsan, Lucian Cumpata">
+    <meta name="description" content="Jigsaw web manager">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="images/jigr.ico" />
     <title>jigr</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/footer.css"> -->
 
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <div class="container">
 
-        <main class="canvas__container"></main>
+        <main class="canvas__container">
+
+        </main>
+
+        <p><a href="#nav__right" id="access_nav" class="access_aid">Skip to navigation</a></p>
+
+        <nav id="nav__right">
+                <ul>
+                    <li><a href="">Help</a></li>
+                </ul>
+                <p>Here is an explanation</p>
+                <p><a href="#body" id="access_top" class="access_aid">Skip to top</a></p>
+        </nav>
+
 
         <nav class="nav__container">
             <img class="logo" src="images/jigr.ico" alt="logo">
             <div class="progress">
-                    <div id="progress__bar"></div>
-                </div>
+                <div id="progress__bar"></div>
+            </div>
             <button class="play" type="button">Play</button>
             <button class="solve" type="button">Solve piece</button>
             <button class="reset" type="button">Reset</button>
@@ -26,6 +46,7 @@
         </nav>
 
     </div>
+
 
 </body>
 
