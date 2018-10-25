@@ -56,10 +56,10 @@
 }
 
 #progress__bar {
-    width: 10%;
+    width: 30%;
     border-radius: 15px;
     padding: 10px 0px;
-    background-color: darkseagreen;
+    background-color: greenyellow;
 }
 button {
     border: none;
@@ -94,5 +94,7 @@ button {
 .slider {
     grid-column: 8/9;
     padding: 18px 0px;
+    border-radius: 5px;
+    color: white;
 }
 
