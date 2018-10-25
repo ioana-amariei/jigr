@@ -26,4 +26,5 @@ Idei:
   - Solve piece with options:
     - Currently selected
     - Random
+  - Coursive transiition for nav_right
  
