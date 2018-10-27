@@ -60,14 +60,15 @@
     color: white;
 }
 
-.github__logo {
+.github {
     grid-column: 9/10;
-    justify-self: center; 
+}
+
+.github__logo {
+    align-self: center; 
     padding: 5px 5px 5px 5px; 
+    border-radius: 5px;
     width:25px;
     height:25px;
     background-color: #ebf5fb;
-    margin-top: 7px;
-    margin-right: 5px;
-    margin-left: 35px;
 }

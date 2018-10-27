@@ -1,16 +1,13 @@
 body { 
     margin: 0; 
     padding: 0;
-    /* overflow: hidden; */
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 20fr 1fr;
-    height: 100%;
-    /* overflow: hidden; */
-    /* position: absolute; */
+    height: 100vh;
 }
 
 .canvas__container {
