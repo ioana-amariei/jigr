@@ -6,12 +6,27 @@
     background-color: #212f3c;
 }
 
+.nav__container__mobile{
+    display: none;
+}
+
 .progress {
     width: 150px;
     height: 20px;
     margin-top: 22px;
     /* border-radius: 15px; */
     background-color: #ebf5fb; 
+}
+
+#progress__text{
+    width: inherit;
+    height: inherit;
+    /* padding: 10px 0px; */
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 5;
+    display: inline-block;
 }
 
 #progress__bar {
@@ -41,6 +56,8 @@
 .dropup {
     position: relative;
     display: inline-block;
+    /* align-content: center; */
+    /* align-items: center; */
 }
 
 .dropup__options {
@@ -64,7 +81,6 @@
     color: #2980b9;
     text-decoration: none;
     padding: 8px 12px;
-    border: 1px solid rgba(0,0,0,.15);
 }
 
 .dropup__options a:hover {
@@ -97,7 +113,10 @@
 
 #submit__image {
     float: right;
-    background-color: #ebf5fb;
+    color: #ebf5fb;
+    background-color: #2980b9;
+    margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .save {
@@ -155,4 +174,46 @@ input[type="range"]::-moz-range-track {
     border-radius: 5px;
     background-color: #ebf5fb;
     height: 25px;
+}
+
+/* MOBILE */
+@media all and (max-width: 700px) {
+    .nav__container {
+        display: none;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .nav__container__mobile{
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        bottom: 0;
+        left: 0;
+    }
+
+    .bottom__nav {
+        width: 100%;
+    }
+
+    .progress{
+        width: 100%;
+    }
+
+    .dropup {
+        align-self: center;
+        width: 100%;
+    }
+
+    .dropup__options {
+        bottom: 0px;
+    }
+
+    .dropup__options:hover {
+        width: 100%;
+    }
+    
+    .progress, .github {
+        display: none;
+    }
 }
