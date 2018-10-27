@@ -1,0 +1,74 @@
+.nav__container {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    bottom: 0px;
+    background-color: #212f3c;
+}
+
+.progress {
+    grid-column: 2/3;
+    width: 100%;
+    height: 20px;
+    margin-top: 15px;
+    margin-right: 5px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+#progress__bar {
+    width: 30%;
+    border-radius: 15px;
+    padding: 10px 0px;
+    background-color: greenyellow;
+}
+
+.bottom_nav {
+    border: none;
+    background-color: #212f3c;
+}
+
+.play {
+    grid-column:3/4;
+    color: white;
+}
+
+.solve {
+    grid-column: 4/5;
+    color: white;
+}
+
+.reset {
+    grid-column: 5/6;
+    color: white;
+}
+
+.load {
+    grid-column: 6/7;
+    color: white;
+}
+
+.save {
+    grid-column: 7/8;
+    color: white;
+}
+
+.slider {
+    grid-column: 8/9;
+    padding: 18px 0px;
+    border-radius: 5px;
+    color: white;
+}
+
+.github {
+    grid-column: 9/10;
+}
+
+.github__logo {
+    align-self: center; 
+    padding: 5px 5px 5px 5px; 
+    border-radius: 5px;
+    width:25px;
+    height:25px;
+    background-color: #ebf5fb;
+}

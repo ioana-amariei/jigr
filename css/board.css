@@ -1,0 +1,17 @@
+body { 
+    margin: 0; 
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20fr 1fr;
+    height: 100vh;
+}
+
+.canvas__container {
+    display: grid;
+    overflow: hidden;
+    background-color:  #ebf5fb ;
+}
