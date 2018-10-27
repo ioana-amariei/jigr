@@ -16,8 +16,6 @@
 </head>
 
 <body>
-
-
     <a href="#nav__right" id="access_nav" class="access_aid">Skip to navigation</a>
     <nav id="nav__right">
         <ul>
@@ -28,19 +26,47 @@
     </nav>
 
     <div class="container">
-        <main class="canvas__container"></main> 
-        
+        <main class="canvas__container"></main>
 
         <nav class="nav__container">
             <div class="progress">
                 <div id="progress__bar"></div>
             </div>
-            <button class="bottom_nav play" type="button">♘ Play</button>
-            <button class="bottom_nav solve">⚝ Solve piece</button>
-            <button class="bottom_nav reset" type="button">↻ Reset</button>
-            <button class="bottom_nav load" type="button">🗁 Load</button>
-            <button class="bottom_nav save" type="button">🖫 Save</button>
-            <button class="bottom_nav difficulty" type="button">⧦    Difficulty</button>
+            <button class="bottom__nav play" type="button"><b>♘</b> Play</button>
+
+            <div class="dropup">
+                <button class="bottom__nav solve"><b>⚝</b> Solve piece</button>
+                <div class="dropup__options">
+                    <a href="#">Currently selected</a>
+                    <a href="#">Random</a>
+                </div>
+            </div>
+
+            <button class="bottom__nav reset" type="button"><b>↻</b> Reset</button>
+
+            <div class="dropup">
+                <button class="bottom__nav load" type="button"><b>🗁</b> Load</button>
+                <div class="dropup__options">
+                    <input id="load__image" type="file" accept="image/*">
+                    <label class="description" for="load__image">Choose image to upload</label>
+                    <input id="load__url" type="url" placeholder="http://www.example.com">
+                    <label class="description" for="load__image">Enter image URL</label>
+                    <input id="submit__image" type="button" value="Submit">
+                </div>
+            </div>
+
+            <button class="bottom__nav save" type="button"><b>🖫</b> Save</button>
+
+            <div class="dropup">
+                <button class="bottom__nav difficulty" type="button"><b>∞</b> Difficulty</button>
+                <div class="dropup__options">
+                    <input id="game__difficulty__slider" min="0" max="10" value="5" step="1" type="range">
+                    <label class="description" for="game__difficulty__slider">Game</label>
+                    <input id="puzzle__generation__difficulty_slider" min="0" max="5" value="3" step="1" type="range">
+                    <label class="description" for="puzzle__generation__difficulty_slider">Puzzle generation</label>
+                </div>
+            </div>
+
             <div class="github">
                 <a class="github__link" href="https://github.com/ioanabirsan/jigr" target="_blank">
                     <img class="github__logo" src="images/github-logo.png" alt="github logo">

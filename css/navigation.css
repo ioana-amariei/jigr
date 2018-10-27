@@ -11,20 +11,21 @@
     width: 100%;
     height: 20px;
     margin-top: 22px;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     background-color: #ebf5fb; 
 }
 
 #progress__bar {
     width: 30%;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     padding: 10px 0px;
-    background-color: greenyellow;
+    background-color: #2980b9;
 }
 
-.bottom_nav {
+.bottom__nav {
     border: none;
     background-color: #212f3c;
+    cursor: pointer;
 }
 
 .play {
@@ -32,32 +33,127 @@
     color: white;
 }
 
+.dropup {
+    position: relative;
+    display: inline-block;
+}
+
+.dropup__options {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    bottom: 64px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    z-index: 1;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-sizing: border-box;
+}
+
+.dropup__options a, input, label {
+    display: block;
+    color: #2980b9;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+.dropup__options a:hover {
+    background-color: #ebf5fb;
+}
+
+.dropup:hover .dropup__options {
+    display: block;
+}
+
 .solve {
     grid-column: 4/5;
     color: white;
+    height: 100%;
 }
 
 .reset {
     grid-column: 5/6;
     color: white;
+    height: 100%;
 }
 
 .load {
     grid-column: 6/7;
     color: white;
+    height: 100%;
+}
+
+#load__url {
+    /* border: 1px solid #2980b9; */
+    border: none;
+    width: 200px;
+}
+
+#submit__image {
+    float: right;
+    background-color: #ebf5fb;
 }
 
 .save {
     grid-column: 7/8;
     color: white;
+    height: 100%;;
 }
 
 .difficulty {
     grid-column: 8/9;
-    padding: 18px 0px;
-    border-radius: 5px;
     color: white;
-    margin-top: 5px;
+    height: 100%;
+}
+
+input[type="range"] {
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    height: 10px;
+    width: 100%;
+    box-shadow: none;
+    background-color: #ebf5fb;
+    left: 0;
+    position: relative;
+    transition: all .5s ease;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+    height: 10px;
+    width: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    background: #2980b9;
+    border-radius: 1.3px;
+    cursor: pointer;
+}
+
+/* Internet Explorer */
+input[type="range"]::-ms-thumb {
+    height: 8px;
+    width: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 2px;
+    background: #2980b9;
+    border-radius: 1.3px;
+    cursor: pointer;
 }
 
 .github {
