@@ -1,6 +1,6 @@
 .nav__container {
     display: grid;
-    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     bottom: 0px;
     background-color: #212f3c;
@@ -10,10 +10,9 @@
     grid-column: 2/3;
     width: 100%;
     height: 20px;
-    margin-top: 15px;
-    margin-right: 5px;
+    margin-top: 22px;
     border-radius: 15px;
-    background-color: white;
+    background-color: #ebf5fb; 
 }
 
 #progress__bar {
@@ -53,22 +52,29 @@
     color: white;
 }
 
-.slider {
+.difficulty {
     grid-column: 8/9;
     padding: 18px 0px;
     border-radius: 5px;
     color: white;
+    margin-top: 5px;
 }
 
 .github {
     grid-column: 9/10;
+    text-align: center; 
+    margin: 1em 0;
 }
 
+.github__link {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
 .github__logo {
-    align-self: center; 
+    vertical-align: middle;
     padding: 5px 5px 5px 5px; 
     border-radius: 5px;
-    width:25px;
-    height:25px;
     background-color: #ebf5fb;
+    height: 25px;
 }
