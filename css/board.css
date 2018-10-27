@@ -1,12 +1,13 @@
-body { 
+body, body * { 
     margin: 0; 
     padding: 0;
+    font-family: Lucida Bright, serif;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20fr 1fr;
+    grid-template-rows: 15fr 1fr;
     height: 100vh;
 }
 

@@ -1,74 +1,172 @@
 .nav__container {
-    display: grid;
-    grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     bottom: 0px;
     background-color: #212f3c;
 }
 
 .progress {
-    grid-column: 2/3;
-    width: 100%;
+    width: 150px;
     height: 20px;
-    margin-top: 15px;
-    margin-right: 5px;
-    border-radius: 15px;
-    background-color: white;
+    margin-top: 22px;
+    /* border-radius: 15px; */
+    background-color: #ebf5fb; 
 }
 
 #progress__bar {
     width: 30%;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     padding: 10px 0px;
-    background-color: greenyellow;
+    background-color: #2980b9;
 }
 
-.bottom_nav {
+.bottom__nav {
     border: none;
     background-color: #212f3c;
+    cursor: pointer;
+}
+
+.bottom__nav:hover {
+    color: #ebf5fb;
+    transform: scaleX(1.2);
 }
 
 .play {
-    grid-column:3/4;
     color: white;
+}
+
+.dropup {
+    position: relative;
+    display: inline-block;
+}
+
+.dropup__options {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    bottom: 64px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    z-index: 1;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-sizing: border-box;
+}
+
+.dropup__options a, input, label {
+    display: block;
+    color: #2980b9;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+.dropup__options a:hover {
+    background-color: #ebf5fb;
+}
+
+.dropup:hover .dropup__options {
+    display: block;
 }
 
 .solve {
-    grid-column: 4/5;
     color: white;
+    height: 100%;
 }
 
 .reset {
-    grid-column: 5/6;
     color: white;
+    height: 100%;
 }
 
 .load {
-    grid-column: 6/7;
     color: white;
+    height: 100%;
+}
+
+#load__url {
+    border: none;
+    width: 200px;
+}
+
+#submit__image {
+    float: right;
+    background-color: #ebf5fb;
 }
 
 .save {
-    grid-column: 7/8;
     color: white;
+    height: 100%;;
 }
 
-.slider {
-    grid-column: 8/9;
-    padding: 18px 0px;
-    border-radius: 5px;
+.difficulty {
     color: white;
+    height: 100%;
+}
+
+input[type="range"] {
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    height: 10px;
+    width: 100%;
+    box-shadow: none;
+    background-color: #ebf5fb;
+    left: 0;
+    position: relative;
+    transition: all .5s ease;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+    height: 10px;
+    width: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    background: #2980b9;
+    border-radius: 1.3px;
+    cursor: pointer;
+}
+
+/* Internet Explorer */
+input[type="range"]::-ms-thumb {
+    height: 8px;
+    width: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+    height: 2px;
+    background: #2980b9;
+    border-radius: 1.3px;
+    cursor: pointer;
 }
 
 .github {
-    grid-column: 9/10;
+    text-align: center; 
+    margin: 1em 0;
 }
 
+.github__link {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
 .github__logo {
-    align-self: center; 
+    vertical-align: middle;
     padding: 5px 5px 5px 5px; 
     border-radius: 5px;
-    width:25px;
-    height:25px;
     background-color: #ebf5fb;
+    height: 25px;
 }
