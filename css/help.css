@@ -1,0 +1,37 @@
+#nav__right{
+    display: none;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 8px 2px #000;    
+}
+
+#nav__right:target{
+    display: block;
+    overflow: hidden;
+}
+
+.access_aid {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 0;
+    padding-top: 40px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: white 10px 10px / 20px 20px no-repeat;
+}
+
+#access_nav {
+    background-image: -webkit-repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+    background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
+}
+
+#access_top {
+    background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0), linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
+}
