@@ -176,6 +176,23 @@ input[type="range"]::-moz-range-track {
     height: 25px;
 }
 
+.css {
+    text-align: center; 
+    margin: 1em 0;
+}
+
+.css__link {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.css__logo {
+    vertical-align: middle;
+    border-radius: 5px;
+    height: 35px;
+}
+
 /* MOBILE */
 @media all and (max-width: 700px) {
     .nav__container {
