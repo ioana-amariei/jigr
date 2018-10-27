@@ -25,16 +25,4 @@ Idei:
   - /puzzles (GET -> all puzzles)
   - /puzzles?search=term (GET -> all puzzles for witch the term matches)
   - /puzzles (POST : url sau imagine propriu zisa si intoarce id-ul puzzle-ului generat)
-
-  TODO:
-  - Difficulty button with options:
-    - Game difficulty slider
-    -Puzze generation difficulty slider
-  - Compact menu on the right side
-  - Add icons for menu items
-  - Gradient for game progress
-  - Solve piece with options:
-    - Currently selected
-    - Random
-  - Coursive transiition for nav_right
  
