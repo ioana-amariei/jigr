@@ -1,14 +1,13 @@
 .nav__container {
-    display: grid;
-    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     bottom: 0px;
     background-color: #212f3c;
 }
 
 .progress {
-    grid-column: 2/3;
-    width: 100%;
+    width: 150px;
     height: 20px;
     margin-top: 22px;
     /* border-radius: 15px; */
@@ -28,8 +27,12 @@
     cursor: pointer;
 }
 
+.bottom__nav:hover {
+    color: #ebf5fb;
+    transform: scaleX(1.2);
+}
+
 .play {
-    grid-column:3/4;
     color: white;
 }
 
@@ -71,25 +74,21 @@
 }
 
 .solve {
-    grid-column: 4/5;
     color: white;
     height: 100%;
 }
 
 .reset {
-    grid-column: 5/6;
     color: white;
     height: 100%;
 }
 
 .load {
-    grid-column: 6/7;
     color: white;
     height: 100%;
 }
 
 #load__url {
-    /* border: 1px solid #2980b9; */
     border: none;
     width: 200px;
 }
@@ -100,13 +99,11 @@
 }
 
 .save {
-    grid-column: 7/8;
     color: white;
     height: 100%;;
 }
 
 .difficulty {
-    grid-column: 8/9;
     color: white;
     height: 100%;
 }
@@ -157,7 +154,6 @@ input[type="range"]::-ms-track {
 }
 
 .github {
-    grid-column: 9/10;
     text-align: center; 
     margin: 1em 0;
 }
