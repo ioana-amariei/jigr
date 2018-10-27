@@ -1,5 +1,5 @@
 # jigr
-Jigsaw Web Manager
+Jigsaw Web Manager: https://ioanabirsan.github.io/jigr/
 
 ### Development workflow
 0. The first time you should clone the project locally. This step should be skipped in future iterations.
