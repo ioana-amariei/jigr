@@ -158,12 +158,12 @@ input[type="range"]::-moz-range-track {
     cursor: pointer;
 }
 
-.github {
+.github, .css {
     text-align: center; 
     margin: 1em 0;
 }
 
-.github__link {
+.github__link, .css__link{
     display: inline-block;
     vertical-align: middle;
     height: 100%;
@@ -174,17 +174,6 @@ input[type="range"]::-moz-range-track {
     border-radius: 5px;
     background-color: #ebf5fb;
     height: 25px;
-}
-
-.css {
-    text-align: center; 
-    margin: 1em 0;
-}
-
-.css__link {
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
 }
 
 .css__logo {
@@ -230,7 +219,7 @@ input[type="range"]::-moz-range-track {
         width: 100%;
     }
     
-    .progress, .github {
+    .progress, .github, .css{
         display: none;
     }
 }
