@@ -23,6 +23,18 @@ body, body * {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
     grid-auto-rows: minmax(100px, auto);
-    column-gap: 2%;
-    row-gap: 1em;
 }
+
+.canvas__container #canvas__container__grid img{
+    max-width: 100%; 
+    height: auto;
+    /*opacity: 0.5; */
+}
+
+/*
+.canvas__container #canvas__container__grid img:hover{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+*/
