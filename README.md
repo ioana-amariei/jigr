@@ -1,5 +1,5 @@
 # jigr (Jigsaw Web Manager)
-Solve a puzzle: https://ioanabirsan.github.io/jigr/
+Play the game: https://ioanabirsan.github.io/jigr/
 
 **`project, infoiasi, cliw, web`**
 
