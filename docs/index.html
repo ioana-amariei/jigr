@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>jigr (Jigsaw Web Manager)</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+</head>
+
+<body prefix="schema: http://schema.org">
+    <header>
+        <div class="banner">
+            <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+            <div class="status">Community Draft</div>
+        </div>
+        <h1>jigr (Jigsaw Web Manager)</h1>
+        <code style=" font-weight:bold;">project, infoiasi, cliw,  web</code>
+    </header>
+
+    <div role="contentinfo">
+        <dl>
+            <dt>Authors</dt>
+            <dd>
+                <i style="font-size:large;">Birsan Ioana, Cumpata Lucian</i>
+            </dd>
+        </dl>
+    </div>
+
+    <section id="introduction" role="doc-introduction">
+        <h2>Introduction</h2>
+        <p style="font-size:large;">
+            This Web application allows solving puzzles proposed by the program or defined by users.
+            Each player will be able to select - locally or remotely via a URL - an image
+            that will be cropped at runtime into fragments as complicated as possible using generative grammar rules.
+            The pieces will be mixed, the shifts / swings can be performed via drag & drop operations.
+            The application will also provide support for snap placement in the right area.
+            The current status of each puzzle can be saved locally with the possibility of subsequent restoration.
+        </p>
+    </section>
+
+    <section id="concepts-on-design">
+        <h2>General design</h2>
+        <ul>
+            <li style="font-size:large;">
+                single page application
+            </li>
+            <li style="font-size:large;">
+                provides various options structured as follows:
+                <ul>
+                    <li style="font-size:large;">help area for more information regarding the game and how to play it</li>
+                    <li style="font-size:large;">progress view area</li>
+                    <li style="font-size:large;">the possibility of receiving a hint for solving a piece: the current one or a random one</li>
+                    <li style="font-size:large;">the ability to reset the game to its original state</li>
+                    <li style="font-size:large;">load area for choosing an image, either locally or remotely via a URL, and for importing last played game state</li>
+                    <li style="font-size:large;">save the current state of the game</li>
+                    <li style="font-size:large;">difficulty selection for both the difficulty of the game and the difficulty of generating the puzzle</li>
+                </ul>
+            </li>
+            <li>
+                Desktop and mobile interfaces
+                <img src="desktop.png" alt="desktop view" style="width:750px; height:475px;">
+                <img src="mobile-2.png" alt="mobile view" style="width:250px; height:400px;">
+                <img src="mobile.png" alt="mobile view" style="width:250px; height:400px;">
+            </li>
+            <li style="font-size:large;">
+                technologies used: HTML5, CSS, JavaScript
+            </li>
+            <li style="font-size:large;">
+                GitHub page: <a href="https://github.com/ioanabirsan/jigr">https://github.com/ioanabirsan/jigr</a>
+            </li>
+
+        </ul>
+    </section>
+
+    <section id="user-interaction">
+        <h2>User interaction</h2>
+    </section>
+
+    <section id="source-code-management">
+        <h2>Souce code management</h2>
+        <p style="font-size:large;">We have been following this development process:</p>
+        <ol>
+            <li style="font-size:large;">
+                Clone the project locally. This step should be skipped in future iterations.
+            </li>
+            <li style="font-size:large;">
+                Checkout to master and pull the latest version from github locally before adding any other code.
+                This should be done each time you want to make changes starting from the latest master changes:
+                <ul>
+                    <li style="font-size:large;">
+                        <code>git branch</code> -> current branch
+                    </li>
+                    <li style="font-size:large;">
+                        <code>git checkout branch-name</code> -> move to branch <code>branch-name</code>
+                    </li>
+                </ul>
+            </li>
+            <li style="font-size:large;">
+                Checkout to a new branch with a name that describes the feature, following the standard <b>name/feature</b>:
+                <code>git checkout -b andrei/add-animations</code>
+            </li>
+            <li style="font-size:large;">
+                Make desired changes to the code and make commits with those changes: <br>
+                <code>git commit -m "message that describes commit"</code>
+            </li>
+            <li style="font-size:large;">
+                Push the changes to GitHub to a branch with the same name: <br>
+                <code>git push -u origin local-branch-name:desired-branch-name-on-github</code> <br>
+                (e.g., <code>`git push -u origin andrei/add-animations:andrei/add-animations`</code>)
+            </li>
+            <li style="font-size:large;">
+                Validate that the changes work as expected.
+            </li>
+            <li style="font-size:large;">
+                If changes work as expected merge the new branch to the <b>master</b> branch. This can be done from the
+                GitHub UI.
+            </li>
+        </ol>
+    </section>
+
+</body>
+
+</html>

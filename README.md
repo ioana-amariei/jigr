@@ -1,6 +1,8 @@
 # jigr
 Jigsaw Web Manager: https://ioanabirsan.github.io/jigr/
 
+**`project, infoiasi, cliw, web`**
+
 ### Development workflow
 0. The first time you should clone the project locally. This step should be skipped in future iterations.
 1. Checkout to master and pull the latest version from github locally before adding any other code. **This should be done each time you want to make changes starting from the latest master changes:** 
