@@ -1,7 +1,10 @@
-# jigr
-Jigsaw Web Manager: https://ioanabirsan.github.io/jigr/
+# jigr (Jigsaw Web Manager)
+Solve a puzzle: https://ioanabirsan.github.io/jigr/
 
 **`project, infoiasi, cliw, web`**
+
+### Project Documentation
+* https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/index.html
 
 ### Development workflow
 0. The first time you should clone the project locally. This step should be skipped in future iterations.
