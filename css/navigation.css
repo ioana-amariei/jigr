@@ -184,6 +184,10 @@ input[type="range"]::-moz-range-track {
 
 /* MOBILE */
 @media all and (max-width: 700px) {
+    .container {
+        background-color: #ebf5fb;
+    }
+
     .nav__container {
         display: none;
         flex-direction: column;
@@ -208,12 +212,13 @@ input[type="range"]::-moz-range-track {
         height: 0; 
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
+        background: transparent;
     }
 
     .arrow__up {
         border-bottom: 20px solid #2980b9;
         bottom: 0;
-      }
+    }
       
     .arrow__down {
         border-top: 20px solid #2980b9;
