@@ -19,6 +19,18 @@ body, body * {
     border-color: rgba(115, 172, 236, 0.322);
 }
 
+
+#image__container{
+    display: grid;
+    height: 100%;
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
 #canvas__container__grid{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
