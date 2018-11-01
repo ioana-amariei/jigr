@@ -6,7 +6,8 @@
     <meta name="author" content="Ioana Birsan, Lucian Cumpata">
     <meta name="description" content="Jigsaw web manager">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="images/jigr.ico" />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/help.css">
     <link rel="stylesheet" href="css/board.css">
@@ -17,20 +18,93 @@
 </head>
 
 <body>
-    <a href="#nav__right" id="access_nav" class="access_aid">Skip to navigation</a>
-    <nav id="nav__right">
-        <ul>
-            <li><a href="">Help</a></li>
-        </ul>
-        Here is an explanation
-        <a href="#body" id="access_top" class="access_aid">Skip to top</a>
+
+    <a href="#help__container" id="access_nav" class="access_aid">Help container</a>
+    <nav id="help__container">
+        <div id="help__container__grid">
+            <div>
+                <b>About</b>
+                <ul>
+                    <li>Jigsaw online manager</li>
+                 </ul>
+                2018
+            </div>
+            <div>
+                <b>Made by</b>
+                    <ul>
+                        <li>Ioana Birsan</li>
+                        <li>Lucian Cumpata</li>
+                     </ul>
+                </div>
+            <div>
+                <b>♘ Play</b>
+                <ul>
+                    <li>This is the play button</li>
+                </ul>
+                Starts the game.
+            </div>
+            <div>
+                <b>⚝ Solve piece</b>
+                <ul>
+                    <li>This is the solve piece button</li>
+                </ul>
+                Solve a random or selected puzzle piece. 
+            </div>
+
+            <div>
+                <b>↻ Reset</b>
+                <ul>
+                    <li>This is the reset button</li>
+                </ul>
+                This resets the game board to it's original state.
+            </div>
+
+            <div>
+                <b>🗁 Load</b>
+                <ul>
+                    <li>This is the Load button</li>
+                </ul>
+                Load area for loading an image, either from local PC or from URL. 
+                Also you can load a game state here.
+            </div>
+
+            <div>
+                <b>🖫 Save</b>
+                <ul>
+                    <li>This is the save button</li>
+                </ul>
+                Save the current state of the game.
+            </div>
+
+            <div>
+                <b>∞ Difficulty</b>
+                <ul>
+                    <li>This is the difficulty slider</li>
+                </ul>
+                Here you can see two sliders: the "game" slider let's you change the game difficulty (number
+                of pieces) and the second slider "Puzzle generation" let's you change the complexity of puzzle shapes.
+            </div>
+
+        </div>
+
+        <a href="#body" id="access_top" class="access_aid">Close help</a>
     </nav>
+
+
+
 
     <button type="button" class="nav__container__mobile" onClick="toggleNavigationMenu();">˄</button>
 
+    <!-- It is just a mockup at the moment!-->
     <div class="container">
-        <main class="canvas__container"></main>
-
+        <main class="canvas__container">
+            <div id="image__container">
+                <img src="images/default/rucksack-magazine-1092901-unsplash.jpg" alt="rucksack-magazine-1092901-unsplash" class="center-fit">
+            </div>
+            
+        </main>
+        <!-- It is just a mockup at the moment!-->
+        <!-- Work in progress!-->
         <nav class="nav__container" id="nav__container">
             <div class="progress">
                 <div id="progress__text">Progress</div>
@@ -77,7 +151,8 @@
                 </a>
             </div>
 
-            <div class="css"><a class="css__link" href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img class="css__logo" src="images/css-validator.png" alt="css validator image"></a></div>
+            <div class="css"><a class="css__link" href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank"><img
+                        class="css__logo" src="images/css-validator.png" alt="css validator image"></a></div>
 
 
         </nav>
