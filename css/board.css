@@ -15,10 +15,7 @@ body, body * {
     display: grid;
     overflow: hidden;
     background-color:  #ebf5fb ;
-    border: solid 1em; 
-    border-color: rgba(115, 172, 236, 0.322);
 }
-
 
 #image__container{
     display: grid;

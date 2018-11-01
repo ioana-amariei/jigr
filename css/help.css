@@ -38,11 +38,10 @@
 
 #help__container__grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr)); 
     grid-auto-rows: minmax(100px, auto);
     column-gap: 5%;
     row-gap: 1em;
-    
 }
 
 #help__container #help__container__grid div{

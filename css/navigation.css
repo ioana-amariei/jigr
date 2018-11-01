@@ -184,6 +184,10 @@ input[type="range"]::-moz-range-track {
 
 /* MOBILE */
 @media all and (max-width: 700px) {
+    .container {
+        background-color: #ebf5fb;
+    }
+
     .nav__container {
         display: none;
         flex-direction: column;
@@ -196,6 +200,29 @@ input[type="range"]::-moz-range-track {
         overflow: hidden;
         bottom: 0;
         left: 0;
+        width: 40px;
+
+        /* border-style: solid;
+        border-width: 15px 15px 15px 15px;
+        border-color: transparent transparent #007bff transparent;  */
+    }
+
+    .arrow {
+        width: 0; 
+        height: 0; 
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        background: transparent;
+    }
+
+    .arrow__up {
+        border-bottom: 20px solid #2980b9;
+        bottom: 0;
+    }
+      
+    .arrow__down {
+        border-top: 20px solid #2980b9;
+        bottom: 180px;
     }
 
     .bottom__nav {
