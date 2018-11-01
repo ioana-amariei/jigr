@@ -14,7 +14,6 @@
     width: 150px;
     height: 20px;
     margin-top: 22px;
-    /* border-radius: 15px; */
     background-color: #ebf5fb; 
 }
 
@@ -31,7 +30,6 @@
 
 #progress__bar {
     width: 30%;
-    /* border-radius: 15px; */
     padding: 10px 0px;
     background-color: #2980b9;
 }
@@ -108,7 +106,8 @@
 
 #load__url {
     border: none;
-    width: 200px;
+    width: 90%;
+    border-bottom: 1px solid #2980b9;
 }
 
 #submit__image {
@@ -140,6 +139,11 @@ input[type="range"] {
     left: 0;
     position: relative;
     transition: all .5s ease;
+}
+
+
+.bottom__border {
+    border-bottom: 1px solid #2980b9;  
 }
 
 /* Firefox */
@@ -201,10 +205,6 @@ input[type="range"]::-moz-range-track {
         bottom: 0;
         left: 0;
         width: 40px;
-
-        /* border-style: solid;
-        border-width: 15px 15px 15px 15px;
-        border-color: transparent transparent #007bff transparent;  */
     }
 
     .arrow {

@@ -25,6 +25,7 @@
     overflow: hidden;
     border: 1px solid #ccc;
     background: white 10px 10px / 20px 20px no-repeat;
+    opacity: 1;
 }
 
 #access_nav {

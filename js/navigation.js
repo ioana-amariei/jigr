@@ -25,3 +25,7 @@ function toggleArrowDirection(){
     menuButton.className = classes;
 }
 
+function setImageOpacity(){
+    var image = document.getElementById('holloween__image');
+    image.className = image.className + ' ' + "holloween__image";
+}
