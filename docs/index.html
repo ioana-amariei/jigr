@@ -239,7 +239,13 @@
                         <h4>Data Structure</h4>
                         <pre>
                             {
-                                pieces: [Piece],
+                                pieces: [
+                                    position: {
+                                        x: Number,
+                                        y: Number
+                                    },
+                                    ...
+                                ],
                                 isSolved: boolean,
                                 progress: Number
                                 // Possibly other
@@ -301,16 +307,6 @@
                         </ul>
             </li>
         </ol>
-    </section>
-
-    <section id="project-development">
-        <h2 itemscope itemtype="https://pending.schema.org/Project">Intermediate stages of project development</h2>
-        <p style="font-size:large;"></p>
-    </section>
-
-    <section id="client-storage-solutions">
-        <h2>Client level storage</h2>
-        <img itemscope itemtype="https://schema.org/ImageObject" src="img/local-storage.png" alt="client level storage">
     </section>
 
     <section id="web-dev-tools">
