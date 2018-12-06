@@ -7,16 +7,23 @@
     <title>jigr (Jigsaw Web Manager)</title>
     <link rel="stylesheet" href="css/scholarly.min.css">
     <script src="js/scholarly.min.js"></script>
+
+    <style>
+        p, li, ol {
+            font-size: large;
+        }
+    </style>
 </head>
 
-<body prefix="schema: http://schema.org">
-    <header>
-        <div class="banner">
-            <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
-            <div class="status">Community Draft</div>
-        </div>
-        <h1>jigr (Jigsaw Web Manager)</h1>
-        <code style=" font-weight:bold;">project, infoiasi, cliw,  web</code>
+<body itemscope="itemscope" itemtype="https://schema.org/ScholarlyArticle" schema: http://schema.org"> <header
+    itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+    <div class="banner">
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="scholarly-html.svg" width="227"
+            height="50" alt="Scholarly HTML logo">
+        <div class="status">Community Draft</div>
+    </div>
+    <h1 itemscope="itemscope" itemtype="https://schema.org/Game">jigr (Jigsaw Web Manager)</h1>
+    <code itemscope="itemscope" itemtype="https://schema.org/CollegeOrUniversity" style=" font-weight:bold;">project, infoiasi, cliw,  web</code>
     </header>
 
     <div role="contentinfo">
@@ -68,14 +75,19 @@
             <li style="font-size:large;">
                 desktop and mobile interfaces
                 <p style="font-size:large; text-align: center;">First iteration</p>
-                <img src="img/initial-layout.png" alt="initial desktop view" style="width:750px; height:475px;">
+                <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/initial-layout.png" alt="initial desktop view"
+                    style="width:750px; height:475px;">
                 <p style="font-size:large; text-align: center;">Last iteration</p>
-                <img src="img/actual-layout.png" alt="initial desktop view" style="width:750px; height:475px;">
+                <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/actual-layout.png" alt="initial desktop view"
+                    style="width:750px; height:475px;">
                 <p style="font-size:large; text-align: center;">Desktop version screenshot</p>
-                <img src="img/desktop.png" alt="desktop view" style="width:100%; height:100%;">
+                <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/desktop.png" alt="desktop view"
+                    style="width:100%; height:100%;">
                 <p style="font-size:large; text-align: center;">Mobile version screenshots</p>
-                <img src="img/mobile-1.png" alt="mobile view" style="width:45%; height:100%;">
-                <img src="img/mobile-2.png" alt="mobile view difficulty" style="width:45%; height:100%;">
+                <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/mobile-1.png" alt="mobile view"
+                    style="width:45%; height:100%;">
+                <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/mobile-2.png" alt="mobile view difficulty"
+                    style="width:45%; height:100%;">
             </li>
         </ul>
     </section>
@@ -131,6 +143,176 @@
         </ol>
     </section>
 
+    <section id="software-architecture">
+        <h2>Software Architecture</h2>
+        <ol>
+            <li style="font-size:large;">
+                <h4>Single Page Application</h4>
+                <p>
+                    In order to improve user experience and
+                    avoid interruptions the application will be conceived
+                    as a Single Page Application (SPA).
+                </p>
+                <p>
+                    As such, when the user accesses the URI of the application,
+                    the client/browser will download all the necessary
+                    code (e.g., HTML, CSS, JavaScript, etc.) from the first page load.
+                </p>
+                <p>
+                    After all the necessary code is retrieved in the context
+                    of the first page load, the game/application will be able to provide
+                    its functionality without interacting with the backend.
+                </p>    
+                <p>
+                    The role of the backend will be to serve just static content in
+                    our case, without the role of generating dynamic content.
+                </p>
+                <img src="diagrams/component/client-server.png" alt="client-server-diagram">
+            </li>
+            <li style="font-size:large;">
+                <h4>High-level components</h4>
+                <p>
+                    In this section we will depict the high-level architecture of the 
+                    application. 
+                </p>
+                <img src="diagrams/component/high-level.png" alt="High level">
+            </li>
+            <li style="font-size:large;">
+                <h4>Classes</h4>
+                <p>
+                    In this section we will depict the class design of the application.
+                </p>
+
+                <p>Puzzle related classes</p>
+                <img src="diagrams/class/puzzle.png" alt="Puzzle">
+
+                <p>Control related classes</p>
+                <img src="diagrams/class/control.png" alt="Control">
+            </li>
+            <li style="font-size:large;">
+                    <h4>Sequence</h4>
+                    <p>
+                        In this section we will depict sequence diagrams.
+                    </p>
+                    Playing a game
+                    <img src="diagrams/sequence/play-game.png" alt="play game">
+                </li>
+    
+    
+            <li style="font-size:large;">
+                Data storage
+                <ul>
+                    <li style="font-size:large;">
+                        <h4>Storage Technologies</h4>
+                        While running, the application will store its data in 
+                        JavaScript objects.
+                
+                        In order to improve the User Experience, we would like 
+                        to offer the user the possibility to persist the game 
+                        state in order to enable him to resume the game at a later time.
+                        In order to accomplish this, we will use two techniques:
+                
+                        <h5>Web Storage API: Local Storage</h5>
+                            We will use the Web Storage API Local Storage mechanism 
+                            in order to persist the game state when the <strong>browser.tabs.onRemoved</strong> event is 
+                            triggered. 
+                
+                            <p>
+                            The data will be saved using a predefined key and it will 
+                            be represented by a JavaScript object.
+                            </p>
+                
+                            When the application is reopened, at a later time, it 
+                            will first check to see if there is a previous game 
+                            saved at the predefined key in the Local Storage, and it will 
+                            resume it; otherwise, it will present the user the normal flow.
+                
+                        <h5>Files</h5>
+                            The user will also have the possibility the save 
+                            the game state externally, in a file, in JSON format.
+                
+                            If the user wants to resume the game at a later time, 
+                            possibly in another browser, or on another computer, he 
+                            can load the saved game file and it will resume it from the saved state.
+                    </li>
+                    <li style="font-size:large;">
+                        <h4>Data Structure</h4>
+                        <pre>
+                            {
+                                pieces: [Piece],
+                                isSolved: boolean,
+                                progress: Number
+                                // Possibly other
+                            }
+                        </pre>
+                        
+                    </li>
+                </ul>
+            </li>
+            <li style="font-size:large;">
+                <h4>Internationalization and Localization</h4>                         
+                        <h5>Localization</h5>
+                
+                          We can define a <strong>locales</strong> object that stores the localized strings for each language:
+
+                          <pre>
+                          var locales = {
+                              en: {
+                                  play: "Play",
+                                  gameOver: "Game Over",
+                                  ...
+                              },
+                              ro: {
+                                  play: "Joaca",
+                                  gameOver: "Jocul s-a terminat",
+                                  ...
+                              }
+                              fr: {
+                
+                              }
+                              ...
+                          }
+                        </pre>
+                        <h5>Internationalization</h5>
+                          Each internationalized element in HTML will be encapsulated in a <strong>span</strong> element. 
+                          All <strong>span</strong> elements will have the same class and a distinct <strong>id</strong> which will 
+                          identify the key to be used for each locale.
+                
+                          When the user selects a language, a JavaScript function call will be triggered which will process the 
+                          <strong>span</strong> elements and updates their text accordingly.
+                
+                        <pre>
+                            for (var span : getLocalizedElements()) {
+                                var id = e.getId();
+                                span.innerHTML = locales[currentLocale][id];
+                            }
+                        </pre>    
+
+                        Alternatives we managed to find on the Web:
+        
+                        <ul>
+                            <li>ECMAScript Internationalization API Specification: http://ecma-international.org/ecma-402/1.0/</li>
+                        
+                            <li>FormatJS: https://formatjs.io/</li>
+                        
+                            <li>IntlMessageFormat: https://github.com/yahoo/intl-messageformat </li>
+
+                            <li>Other: https://www.sitepen.com/blog/2017/07/19/the-state-of-internationalization-in-javascript/</li>
+                        </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section id="project-development">
+        <h2 itemscope itemtype="https://pending.schema.org/Project">Intermediate stages of project development</h2>
+        <p style="font-size:large;"></p>
+    </section>
+
+    <section id="client-storage-solutions">
+        <h2>Client level storage</h2>
+        <img itemscope itemtype="https://schema.org/ImageObject" src="img/local-storage.png" alt="client level storage">
+    </section>
+
     <section id="web-dev-tools">
         <h2>Web development tools and technologies</h2>
         <ul>
@@ -162,8 +344,23 @@
     <section id="references">
         <h2>References</h2>
         <ol>
-            <li style="font-size:large;">
+            <li itemscope itemtype="https://schema.org/URL" style="font-size:large;">
                 https://developer.mozilla.org/ro/
+            </li>
+            <li itemscope itemtype="https://schema.org/URL" style="font-size:large;">
+                https://bitsofco.de/an-overview-of-client-side-storage/
+            </li>
+            <li itemscope itemtype="https://schema.org/URL" style="font-size:large;">
+                https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+            </li>
+            <li itemscope itemtype="https://schema.org/URL" style="font-size:large;">
+                https://en.wikipedia.org/wiki/Single-page_application
+            </li>
+            <li itemscope itemtype="https://schema.org/URL" style="font-size:large;">
+                http://singlepageappbook.com/single-page.html
+            </li>
+            <li itemscope itemtype="https://schema.org/URL" style="font-size:large;">
+                http://ecma-international.org/ecma-402/1.0/
             </li>
         </ol>
     </section>
