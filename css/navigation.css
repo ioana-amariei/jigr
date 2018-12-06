@@ -54,8 +54,6 @@
 .dropup {
     position: relative;
     display: inline-block;
-    /* align-content: center; */
-    /* align-items: center; */
 }
 
 .dropup__options {
@@ -140,7 +138,6 @@ input[type="range"] {
     position: relative;
     transition: all .5s ease;
 }
-
 
 .bottom__border {
     border-bottom: 1px solid #2980b9;  
