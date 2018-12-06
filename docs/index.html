@@ -262,21 +262,27 @@
                           We can define a <strong>locales</strong> object that stores the localized strings for each language:
 
                           <pre>
-                          var locales = {
-                              en: {
-                                  play: "Play",
-                                  gameOver: "Game Over",
-                                  ...
-                              },
-                              ro: {
-                                  play: "Joaca",
-                                  gameOver: "Jocul s-a terminat",
-                                  ...
-                              }
-                              fr: {
-                
-                              }
-                              ...
+                            let locales = {
+                                en: {
+                                    language: "EN",
+                                    play: "Play",
+                                    solvePiece: "Solve piece",
+                                    reset: "Reset",
+                                    load: "Load",
+                                    save: "Save",
+                                    difficulty: "Difficulty"
+                            
+                                },
+                                ro: {
+                                    language: "RO",
+                                    play: "Joaca",
+                                    solvePiece: "Rezolva piesa",
+                                    reset: "Reseteaza",
+                                    load: "Incarca",
+                                    save: "Salveaza",
+                                    difficulty: "Dificultate"
+                                }
+                            }
                           }
                         </pre>
                         <h5>Internationalization</h5>
@@ -288,9 +294,13 @@
                           <strong>span</strong> elements and updates their text accordingly.
                 
                         <pre>
-                            for (var span : getLocalizedElements()) {
-                                var id = e.getId();
-                                span.innerHTML = locales[currentLocale][id];
+                            function updateLocale(locale) {
+                                let localizedElements = document.getElementsByClassName("i18n");
+                            
+                                for (localizedElement of localizedElements){
+                                    let id = localizedElement.id;
+                                    localizedElement.innerHTML = locales[locale][id];
+                                };
                             }
                         </pre>    
 
