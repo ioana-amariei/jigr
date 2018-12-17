@@ -109,7 +109,7 @@
             </div>
 
             <div class="progress">
-                <div id="progress__text">Progress</div>
+                <div id="progress__text"><span class="i18n" id="progress">Progress</span></div>
                 <div id="progress__bar"></div>
             </div>
             <button class="bottom__nav play" type="button"><b>♘</b> <span class="i18n" id="play">Play</span></button>
@@ -117,8 +117,8 @@
             <div class="dropup">
                 <button class="bottom__nav solve"><b>⚝</b> <span class="i18n" id="solvePiece">Solve piece</span></button>
                 <div class="dropup__options">
-                    <a class="bottom__border" href="#">Currently selected</a>
-                    <a href="#">Random</a>
+                    <a class="bottom__border" href="#"><span class="i18n" id="currentlySelected">Currently selected</span></a>
+                    <a href="#"><span class="i18n" id="random">Random</span></a>
                 </div>
             </div>
 
@@ -127,11 +127,11 @@
             <div class="dropup">
                 <button class="bottom__nav load" type="button"><b>🗁</b> <span class="i18n" id="load">Load</span></button>
                 <div class="dropup__options">
-                    <label class="description" for="load__image">Choose image to upload</label>
+                    <label class="description" for="load__image"><span class="i18n" id="chooseImageToUpload">Choose image to upload</span></label>
                     <input id="load__image" class="bottom__border" type="file" accept="image/*">
-                    <label class="description" for="load__image">Enter image URL</label>
-                    <input id="load__url" class="bottom__border" type="url" placeholder="URL to image">
-                    <label class="description" for="load__saved__game">Load saved game</label>
+                    <label class="description" for="load__image"><span class="i18n" id="enterImageUrl">Enter image URL</span></label>
+                    <input id="load__url" class="bottom__border" type="url" placeholder="URL">
+                    <label class="description" for="load__saved__game"><span class="i18n" id="loadSavedGame">Load saved game</span></label>
                     <input id="load__saved__game" type="file">
                     <input id="submit__image" type="button" value="Submit">
                 </div>
@@ -142,10 +142,10 @@
             <div class="dropup">
                 <button class="bottom__nav difficulty" type="button"><b>∞</b> <span class="i18n" id="difficulty">Difficulty</span></button>
                 <div class="dropup__options">
-                    <label class="description" for="game__difficulty__slider">Game</label>
+                    <label class="description" for="game__difficulty__slider"><span class="i18n" id="game">Game</span></label>
                     <input id="game__difficulty__slider" class="bottom__border" min="0" max="100" value="25" step="1"
                         type="range">
-                    <label class="description" for="puzzle__generation__difficulty_slider">Puzzle generation</label>
+                    <label class="description" for="puzzle__generation__difficulty_slider"><span class="i18n" id="puzzleGeneration">Puzzle generation</span></label>
                     <input id="puzzle__generation__difficulty_slider" min="0" max="100" value="75" step="1" type="range">
                 </div>
             </div>
