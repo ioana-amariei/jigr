@@ -1,5 +1,12 @@
 let locales = {
     en: {
+        helpAbout: "About",
+        helpMadeBy: "Made by",
+        helpPlay: "Play",
+        helpDescribePlay: "This is the play button",
+        helpSolvePiece: "Solve piece",
+        helpDescribeSolvePiece: "This is the solve piece button",
+        helpDescribeSolvePiece1: "Solve a random or selected puzzle piece.",
         language: "EN",
         progress: "Progress",
         play: "Play",
@@ -17,6 +24,13 @@ let locales = {
         puzzleGeneration: "Puzzle generation"
     },
     ro: {
+        helpAbout: "Despre",
+        helpMadeBy: "Dezvoltat de",
+        helpPlay: "Joaca",
+        helpDescribePlay: "Acesta este butonul de incepere a jocului",
+        helpSolvePiece: "Rezolva piesa",
+        helpDescribeSolvePiece: "Acesta este butonul de rezolvare a unei piese.",
+        helpDescribeSolvePiece1: "Rezolva in mod aleatoriu sau rezolva piesa curenta.",
         language: "RO",
         progress: "Progres",
         play: "Joaca",
@@ -33,6 +47,7 @@ let locales = {
         game: "Joc",
         puzzleGeneration: "Generare puzzle"
     }
+    
 }
 
 function updateLocale(locale) {
