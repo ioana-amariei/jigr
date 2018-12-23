@@ -94,12 +94,11 @@
     <button type="button" id="menu__button" class="nav__container__mobile arrow arrow__up" onClick="toggleArrowDirection(); toggleNavigationMenu();"></button>
 
     <div class="container">
-        <main class="canvas__container">
-            <div id="image__container">
-                <img id="holloween__image" src="images/default/default-2.jpg" alt="halloween" class="center-fit">
-            </div>
 
+        <main class="canvas__container">
+            <canvas id="canvas" class="puzzle__container" width="1200" height="650"></canvas>
         </main>
+
         <nav class="nav__container" id="nav__container">
             <div class="dropup">
                 <button class="bottom__nav solve i18n" id="language">EN</button>
@@ -168,6 +167,7 @@
 
     <script src="js/navigation.js"></script>
     <script src="js/i18n.js"></script>
+    <script src="js/canvas.js"></script>
 </body>
 
 </html>
