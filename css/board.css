@@ -16,3 +16,7 @@ body, body * {
     overflow: hidden;
     background-color:  #ebf5fb ;
 }
+
+#canvas {
+    align-content: center;
+}
