@@ -48,7 +48,7 @@
                     <li><span class="i18n" id="helpDescribeSolvePiece">This is the solve piece button</span></li>
                 </ul>
                 <span class="i18n" id="helpDescribeSolvePiece1">Solve a random or selected puzzle piece.</span>
-                
+
             </div>
 
             <div>
@@ -96,18 +96,10 @@
     <div class="container">
 
         <main class="canvas__container">
-            <canvas id="canvas" class="puzzle__container" width="1200" height="650"></canvas>
+            <canvas id="canvas" class="puzzle__container" width="1450" height="705"></canvas>
         </main>
 
         <nav class="nav__container" id="nav__container">
-            <div class="dropup">
-                <button class="bottom__nav solve i18n" id="language">EN</button>
-                <div class="dropup__options">
-                    <a class="bottom__border" href="#" onclick="updateLocale('en');">(EN) English</a>
-                    <a href="#" onclick="updateLocale('ro');">(RO) Romana</a>
-                </div>
-            </div>
-
             <div class="progress">
                 <div id="progress__text"><span class="i18n" id="progress">Progress</span></div>
                 <div id="progress__bar"></div>
@@ -127,16 +119,18 @@
             <div class="dropup">
                 <button class="bottom__nav load" type="button"><b>🗁</b> <span class="i18n" id="load">Load</span></button>
                 <div class="dropup__options">
-                    <label class="description" for="load__image"><span class="i18n" id="chooseImageToUpload">Choose image to upload</span></label>
+                    <label class="description" for="load__image"><span class="i18n" id="chooseImageToUpload">Choose
+                            image to upload</span></label>
                     <input id="load__image" class="bottom__border" type="file" accept="image/*">
                     <label class="description" for="load__image"><span class="i18n" id="enterImageUrl">Enter image URL</span></label>
                     <input id="load__url" class="bottom__border" type="url" placeholder="URL">
-                    <label class="description" for="load__saved__game"><span class="i18n" id="loadSavedGame">Load saved game</span></label>
+                    <label class="description" for="load__saved__game"><span class="i18n" id="loadSavedGame">Load saved
+                            game</span></label>
                     <input id="load__saved__game" type="file">
                     <input id="submit__image" type="button" value="Submit">
                 </div>
             </div>
-            
+
             <button class="bottom__nav save" type="button"><b>🖫</b> <span class="i18n" id="save">Save</span></button>
 
             <div class="dropup">
@@ -145,8 +139,17 @@
                     <label class="description" for="game__difficulty__slider"><span class="i18n" id="game">Game</span></label>
                     <input id="game__difficulty__slider" class="bottom__border" min="0" max="100" value="25" step="1"
                         type="range">
-                    <label class="description" for="puzzle__generation__difficulty_slider"><span class="i18n" id="puzzleGeneration">Puzzle generation</span></label>
+                    <label class="description" for="puzzle__generation__difficulty_slider"><span class="i18n" id="puzzleGeneration">Puzzle
+                            generation</span></label>
                     <input id="puzzle__generation__difficulty_slider" min="0" max="100" value="75" step="1" type="range">
+                </div>
+            </div>
+
+            <div class="dropup">
+                <button class="bottom__nav solve i18n" id="language">EN</button>
+                <div class="dropup__options">
+                    <a class="bottom__border" href="#" onclick="updateLocale('en');">(EN) English</a>
+                    <a href="#" onclick="updateLocale('ro');">(RO) Romana</a>
                 </div>
             </div>
 
@@ -156,10 +159,6 @@
                 </a>
             </div>
 
-            <!-- <div class="css"><a class="css__link" href="https://validator.w3.org/nu/?showsource=yes&showoutline=yes&doc=https%3A%2F%2Fioanabirsan.github.io%2Fjigr%2F"
-                    target="_blank"><img class="css__logo" src="images/css-validator.png" alt="css validator image"></a></div> -->
-
-
         </nav>
     </div>
 
@@ -168,6 +167,13 @@
     <script src="js/navigation.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/load-image.js"></script>
+
+    <!-- <script src="js/models/Position.js"></script>
+    <script src="js/models/Dimension.js"></script>
+    <script src="js/models/Piece.js"></script>
+    <script src="js/models/GameState.js"></script>
+    <script src="js/models/Canvas.js"></script>
+    <script src="js/models/main.js"></script> -->
 </body>
 
 </html>
