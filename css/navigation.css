@@ -184,6 +184,27 @@ input[type="range"]::-moz-range-track {
 }
 
 /* MOBILE */
+@media all and (max-width: 300px) {
+    #canvas {
+        height: 220px;
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    #canvas {
+        height: 300px;
+        width: 480px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #canvas {
+        height: 400px;
+        width: 900px;
+    }
+}
+
 @media all and (max-width: 700px) {
     .container {
         background-color: #ebf5fb;
@@ -245,5 +266,10 @@ input[type="range"]::-moz-range-track {
     
     .progress, .github, .css{
         display: none;
+    }
+
+    #canvas {
+        height: 220px;
+        width: 400px;
     }
 }
