@@ -95,8 +95,8 @@
 
     <div class="container">
 
-        <main class="canvas__container">
-            <canvas id="canvas" class="puzzle__container" width="1450" height="705"></canvas>
+        <main id="canvas__container" class="canvas__container">
+            <canvas id="canvas" class="puzzle__container"></canvas>
         </main>
 
         <nav class="nav__container" id="nav__container">
@@ -114,7 +114,7 @@
                 </div>
             </div>
 
-            <button class="bottom__nav reset" type="button"><b>↻</b> <span class="i18n" id="reset">Reset</span></button>
+            <button id="reset" class="bottom__nav reset" type="button"><b>↻</b> <span class="i18n" id="reset">Reset</span></button>
 
             <div class="dropup">
                 <button class="bottom__nav load" type="button"><b>🗁</b> <span class="i18n" id="load">Load</span></button>
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            <button class="bottom__nav save" type="button"><b>🖫</b> <span class="i18n" id="save">Save</span></button>
+            <button id="save" class="bottom__nav save" type="button"><b>🖫</b> <span class="i18n" id="save">Save</span></button>
 
             <div class="dropup">
                 <button class="bottom__nav difficulty" type="button"><b>∞</b> <span class="i18n" id="difficulty">Difficulty</span></button>
@@ -162,18 +162,14 @@
         </nav>
     </div>
 
-    <!-- <input type="number" id="progress__percent" onchange="setGameProgressBar(this.value);"> -->
-
     <script src="js/navigation.js"></script>
     <script src="js/i18n.js"></script>
-    <script src="js/load-image.js"></script>
-<!-- 
-    <script src="js/models/Position.js"></script>
-    <script src="js/models/Dimension.js"></script>
-    <script src="js/models/Piece.js"></script>
-    <script src="js/models/GameState.js"></script>
-    <script src="js/models/Game.js"></script>
-    <script src="js/models/main.js"></script> -->
+    <script src="game/util.js"></script>
+    <script src="game/Point.js"></script>
+    <script src="game/EdgeType.js"></script>
+    <script src="game/Piece.js"></script>
+    <script src="game/Game.js"></script>
+    <script src="game/main.js"></script>
 </body>
 
 </html>
