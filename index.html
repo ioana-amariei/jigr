@@ -104,7 +104,17 @@
                 <div id="progress__text"><span class="i18n" id="progress">Progress</span></div>
                 <div id="progress__bar"></div>
             </div>
-            <button class="bottom__nav play" type="button"><b>♘</b> <span class="i18n" id="play">Play</span></button>
+
+            <div class="dropup">
+                <button class="bottom__nav play" type="button"><b>♘</b> <span class="i18n" id="play">Play</span></button>
+                <div class="dropup__options">
+                    <label class="description" for="load__image"><span class="i18n" id="chooseImageToUpload">Choose
+                            image to upload</span></label>
+                    <input id="load__image" class="bottom__border" type="file" accept="image/*">
+                    <label class="description" for="load__image"><span class="i18n" id="enterImageUrl">Enter image URL</span></label>
+                    <input id="load__url" class="bottom__border" type="url" placeholder="URL">
+                </div>
+            </div>
 
             <div class="dropup">
                 <button class="bottom__nav solve"><b>⚝</b> <span class="i18n" id="solvePiece">Solve piece</span></button>
@@ -119,15 +129,9 @@
             <div class="dropup">
                 <button class="bottom__nav load" type="button"><b>🗁</b> <span class="i18n" id="load">Load</span></button>
                 <div class="dropup__options">
-                    <label class="description" for="load__image"><span class="i18n" id="chooseImageToUpload">Choose
-                            image to upload</span></label>
-                    <input id="load__image" class="bottom__border" type="file" accept="image/*">
-                    <label class="description" for="load__image"><span class="i18n" id="enterImageUrl">Enter image URL</span></label>
-                    <input id="load__url" class="bottom__border" type="url" placeholder="URL">
                     <label class="description" for="load__saved__game"><span class="i18n" id="loadSavedGame">Load saved
                             game</span></label>
                     <input id="load__saved__game" type="file">
-                    <input id="submit__image" type="button" value="Submit">
                 </div>
             </div>
 
