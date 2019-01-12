@@ -158,13 +158,10 @@ class Canvas {
 
         this.context.clip();
 
-        this.context.drawImage(
-            this.image,
-            0 - piece.finalX + piece.x,
-            0 - piece.finalY + piece.y,
-            this.canvas.width,
-            this.canvas.height
-        );
+        let x = 0 - piece.finalX + piece.x;
+        let y = 0 - piece.finalY + piece.y;
+
+        this.context.drawImage(this.image, x, y, this.canvas.width, this.canvas.height);
 
         this.context.stroke();
         this.context.restore();

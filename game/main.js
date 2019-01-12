@@ -75,7 +75,6 @@ function onMoveEventHandler(event) {
     }
 }
 
-// TODO: refactor
 function onResetEventHandler() {
     game.pieces = [];
     game.solvedPieces = [];
@@ -137,7 +136,6 @@ function onSaveEventHandler() {
     document.body.removeChild(anchor);
 }
 
-// TODO: refactor, update
 function loadSavedGameHandler(event) {
     if (!event.target.value) {
         alert('Please Select One');
@@ -150,7 +148,6 @@ function loadSavedGameHandler(event) {
     }
 }
 
-// TODO: implement
 function resumeFromSavedGame(savedGame) {
     let gameData = JSON.parse(savedGame);
 
@@ -181,7 +178,6 @@ function resumeFromSavedGame(savedGame) {
 
         game.canvas.shapeDifficulty = gameData.canvas.shapeDifficulty;
 
-
         game.resume();
     });
 }
@@ -202,7 +198,6 @@ function createPieces(pieces) {
         p.offsetY = piece.offsetY;
         p.visible = piece.visible;
         p.solved = piece.solved;
-
 
         pieceObjects.push(p);
     }

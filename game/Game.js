@@ -203,7 +203,6 @@ class Game {
         let y = computeRandom(0, this.canvas.canvas.height - pieceRatio.height);
 
         return new Point(x, y);
-
     }
 
 }
