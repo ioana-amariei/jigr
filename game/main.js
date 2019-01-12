@@ -177,8 +177,8 @@ function resumeFromSavedGame(savedGame) {
         game.columns = gameData.columns;
         game.clickedPieceIndex = gameData.clickedPieceIndex;
         game.lastClickedPieceIndex = gameData.lastClickedPieceIndex;
+        game.progressIncrement = gameData.progressIncrement;
         game.progress = gameData.progress;
-        game.progressIncrement = 100 / game.pieces.length;
         game.displayHelperImage = gameData.displayHelperImage;
         game.difficulty = gameData.difficulty;
 
