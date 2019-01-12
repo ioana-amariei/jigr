@@ -6,6 +6,11 @@ https://shout.setfive.com/2015/04/23/javascript-building-a-html5-canvas-puzzle/
 
 let game;
 
+window.addEventListener("beforeunload", function () {
+    window.localStorage.setItem('game-state', JSON.stringify(game));
+});
+
+
 // TODO: move in navigation.js
 const loadImage = document.getElementById('load__image');
 loadImage.addEventListener('input', loadImageEventHandler);
@@ -150,6 +155,7 @@ function loadSavedGameHandler(event) {
 
 function resumeFromSavedGame(savedGame) {
     let gameData = JSON.parse(savedGame);
+    // console.log(gameData);
 
     let image = new Image();
     image.src = gameData.src;
@@ -203,4 +209,9 @@ function createPieces(pieces) {
     }
 
     return pieceObjects;
+}
+
+let savedGame = window.localStorage.getItem("game-state");
+if (savedGame !== 'undefined') {
+    resumeFromSavedGame(savedGame);
 }
