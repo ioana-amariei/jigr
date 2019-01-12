@@ -82,10 +82,8 @@ function onResetEventHandler() {
     game.progress = 0;
 
     let difficulty = new Difficulty(pieceNumber.value, pieceShape.value);
-    console.log(difficulty);
     game.difficulty = difficulty.pieceNumber;
     game.canvas.shapeDifficulty = 9 - difficulty.pieceShape;
-    console.log(game.canvas.shapeDifficulty);
 
     setGameProgressBar(0);
 
@@ -110,7 +108,6 @@ function onRandomSelectedEventHandler() {
 }
 
 function onCurrentlySelectedEventHandler() {
-    console.log("currentlySelected");
     if (game.lastClickedPieceIndex !== -1) {
         let piece = game.pieces[game.lastClickedPieceIndex];
 
@@ -123,18 +120,15 @@ function onCurrentlySelectedEventHandler() {
         game.progress += game.getProgressIncrement();
         setGameProgressBar(game.progress);
 
-        console.log(game.lastClickedPieceIndex);
         game.lastClickedPieceIndex = -1;
     }
 }
 
 function onSaveEventHandler() {
     let gameData = JSON.stringify(game, null, 4);
-    // alert(gameData);
 
     let anchor = document.createElement('a');
     anchor.href = 'data:application/json,' + gameData;
-    console.log(anchor.href);
     anchor.style.display = 'none';
     anchor.download = "puzzle-saved-game.json";
 
@@ -158,12 +152,7 @@ function loadSavedGameHandler(event) {
 
 // TODO: implement
 function resumeFromSavedGame(savedGame) {
-    console.log("resumeFromSavedGame");
-
     let gameData = JSON.parse(savedGame);
-
-    console.log("gameData");
-    console.log(gameData);
 
     let image = new Image();
     image.src = gameData.src;
@@ -195,15 +184,9 @@ function resumeFromSavedGame(savedGame) {
 
         game.resume();
     });
-
-    // console.log("game");
-    // console.log(game);
 }
 
 function createPieces(pieces) {
-    console.log("createPieces");
-    // console.log(pieces);
-
     let pieceObjects = [];
     for (let piece of pieces) {
         let p = new Piece(new Point(), new Point(), 1, 1, 1, 1);
@@ -224,6 +207,5 @@ function createPieces(pieces) {
         pieceObjects.push(p);
     }
 
-    console.log(pieceObjects);
     return pieceObjects;
 }

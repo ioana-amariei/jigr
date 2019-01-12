@@ -84,7 +84,6 @@ class Game {
     }
 
     drawPuzzlePieces() {
-        // console.log("drawPuzzlePieces");
         this.canvas.clear();
 
         for (let piece of this.solvedPieces) {

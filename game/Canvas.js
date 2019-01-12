@@ -1,6 +1,5 @@
 class Canvas {
     constructor(image, pieceShape) {
-        console.log("Canvas()");
         this.image = image;
 
         this.canvas = document.getElementById('canvas');
@@ -149,11 +148,6 @@ class Canvas {
     }
 
     drawPuzzlePiece(piece, rows, columns) {
-        console.log("drawPuzzlePiece");
-        // console.log(piece);
-        // console.log(rows);
-        // console.log(columns);
-
         this.context.save();
 
         if (!piece.isVisible()) {
@@ -191,7 +185,6 @@ class Canvas {
     }
 
     setCanvasSize() {
-        console.log("setCanvasSize()");
         let aspectRatio = calculateAspectRatioFit(this.image.width, this.image.height, this.maxWidth, this.maxHeight);
         this.canvas.width = aspectRatio.width;
         this.canvas.height = aspectRatio.height;
