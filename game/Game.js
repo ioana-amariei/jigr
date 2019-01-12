@@ -84,7 +84,6 @@ class Game {
     }
 
     drawPuzzlePieces() {
-        // console.log("drawPuzzlePieces");
         this.canvas.clear();
 
         for (let piece of this.solvedPieces) {
@@ -204,7 +203,6 @@ class Game {
         let y = computeRandom(0, this.canvas.canvas.height - pieceRatio.height);
 
         return new Point(x, y);
-
     }
 
 }
