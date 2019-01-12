@@ -32,10 +32,10 @@ Idei:
   - /puzzles (POST : url sau imagine propriu zisa si intoarce id-ul puzzle-ului generat)
  
  Puzzle games:
-    - http://www.raymondhill.net/puzzle-rhill/jigsawpuzzle-rhill.php
-    - https://shout.setfive.com/2015/04/23/javascript-building-a-html5-canvas-puzzle/
-    - https://github.com/andysellick/jigsaw/
-    - https://coursesweb.net/javascript/image-puzzle-game-script
-    - http://www.netzgesta.de/snapfit/
-    - http://gavmac.github.io/jigsaw/
-    - https://codepen.io/dearsaif/pen/mOjbLK
+- http://www.raymondhill.net/puzzle-rhill/jigsawpuzzle-rhill.php
+- https://shout.setfive.com/2015/04/23/javascript-building-a-html5-canvas-puzzle/
+- https://github.com/andysellick/jigsaw/
+- https://coursesweb.net/javascript/image-puzzle-game-script
+- http://www.netzgesta.de/snapfit/
+- http://gavmac.github.io/jigsaw/
+- https://codepen.io/dearsaif/pen/mOjbLK
