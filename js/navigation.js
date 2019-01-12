@@ -1,3 +1,9 @@
+/*
+    Resources:
+        - https://stackoverflow.com/questions/23451726/saving-binary-data-as-file-using-javascript-from-a-browser
+*/
+
+
 function toggleNavigationMenu() {
     var navMenu = document.getElementById("nav__container");
     if (navMenu.style.display === "flex") {
@@ -25,7 +31,3 @@ function toggleArrowDirection(){
     menuButton.className = classes;
 }
 
-function setImageOpacity(){
-    var image = document.getElementById('holloween__image');
-    image.className = image.className + ' ' + "holloween__image";
-}
