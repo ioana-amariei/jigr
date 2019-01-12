@@ -140,12 +140,10 @@
             <div class="dropup">
                 <button class="bottom__nav difficulty" type="button"><b>∞</b> <span class="i18n" id="difficulty">Difficulty</span></button>
                 <div class="dropup__options">
-                    <label class="description" for="game__difficulty__slider"><span class="i18n" id="game">Game</span></label>
-                    <input id="game__difficulty__slider" class="bottom__border" min="0" max="100" value="25" step="1"
-                        type="range">
-                    <label class="description" for="puzzle__generation__difficulty_slider"><span class="i18n" id="puzzleGeneration">Puzzle
-                            generation</span></label>
-                    <input id="puzzle__generation__difficulty_slider" min="0" max="100" value="75" step="1" type="range">
+                    <label class="description" for="puzzle__generation__difficulty_slider"><span class="i18n" id="puzzleGeneration">Piece number</span></label>
+                    <input id="piece__number__difficulty_slider" min="2" max="20" value="4" step="1" type="range">
+                    <label class="description" for="shape__difficulty_slider"><span class="i18n" id="shape">Piece shape</span></label>
+                    <input id="piece__shape__difficulty_slider" min="3" max="6" value="4" step="1" type="range">
                 </div>
             </div>
 
@@ -166,15 +164,18 @@
         </nav>
     </div>
 
-    <script src="js/navigation.js"></script>
     <script src="js/i18n.js"></script>
     <script src="game/util.js"></script>
-    <script src="js/load-image.js"></script>
+    <!-- <script src="js/load-image.js"></script> -->
     <script src="game/Point.js"></script>
+    <script src="game/ArcDirection.js"></script>
     <script src="game/EdgeType.js"></script>
     <script src="game/Piece.js"></script>
+    <script src="game/Canvas.js"></script>
+    <script src="game/Difficulty.js"></script>
     <script src="game/Game.js"></script>
-    <!-- <script src="game/main.js"></script> -->
+    <script src="game/main.js"></script>
+    <script src="js/navigation.js"></script>
 </body>
 
 </html>
