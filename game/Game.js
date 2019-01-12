@@ -119,6 +119,7 @@ class Game {
     resume() {
         this.clearAllIntervals();
 
+        setGameProgressBar(game.progress);
         this.setupEventHandlers();
         let self = this;
         setInterval(function () { self.drawPuzzlePieces(); }, 10);
