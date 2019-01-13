@@ -34,7 +34,7 @@ Idei:
  Puzzle games:
 - http://www.raymondhill.net/puzzle-rhill/jigsawpuzzle-rhill.php
 - https://shout.setfive.com/2015/04/23/javascript-building-a-html5-canvas-puzzle/
-- https://github.com/andysellick/jigsaw/
+- http://www.custarddoughnuts.co.uk/jigsaw
 - https://coursesweb.net/javascript/image-puzzle-game-script
 - http://www.netzgesta.de/snapfit/
 - http://gavmac.github.io/jigsaw/
