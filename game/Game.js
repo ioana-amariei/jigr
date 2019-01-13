@@ -171,7 +171,7 @@ class Game {
         this.canvas.canvas.addEventListener(onMove, onMoveEventHandler, false);
 
         let onReset = ((document.ontouchstart !== null) ? 'mousedown' : 'touchstart');
-        document.getElementById('reset').addEventListener(onReset, onResetEventHandler, false);
+        document.getElementById('reset__option').addEventListener(onReset, onResetEventHandler, false);
 
         let self = this;
         document.onkeypress = function (event) { self.toggleDisplayHelperImageWithSolvedPuzzle(event); };
@@ -180,7 +180,7 @@ class Game {
         // document.getElementById('currentlySelected').addEventListener('click', onCurrentlySelectedEventHandler, false);
 
         let onSave = ((document.ontouchstart !== null) ? 'mousedown' : 'touchstart');
-        document.getElementById('save').addEventListener(onSave, onSaveEventHandler, false);
+        document.getElementById('save__option').addEventListener(onSave, onSaveEventHandler, false);
 
         this.clearDrawingHandler();
         this.setupDrawingHandler();
