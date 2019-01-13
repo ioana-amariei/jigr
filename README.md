@@ -34,6 +34,7 @@ Idei:
  Resources:
 - https://developer.mozilla.org/kab/docs/Web/API/Canvas_API
 - https://developer.mozilla.org/en-US/docs/Web
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 - https://stackoverflow.com/
 - https://iampava.com/cliw/
 - https://profs.info.uaic.ro/~busaco/teach/courses/cliw/
