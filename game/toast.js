@@ -1,7 +1,8 @@
 let options = {
 	style: {
 		main: {
-            // Options to override toast style
+			// Options to override toast style
+			width: '25%'
 		}
 	}
 };

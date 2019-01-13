@@ -17,6 +17,10 @@ class Game {
         this.drawingEventHandlerId = null;
     }
 
+    isOver() {
+        return this.pieces.length === 0;
+    }
+
     toggleDisplayHelperImageWithSolvedPuzzle(event) {
         if (event.code === 'Space') {
             this.displayHelperImage = !this.displayHelperImage;
@@ -104,6 +108,11 @@ class Game {
 
         if (this.displayHelperImage) {
             this.drawHelperImageWithSolvedPuzzle();
+        }
+
+        if(this.isOver()) {
+            this.clearDrawingHandler();
+            iqwerty.toast.Toast('Puzzle completed', options);
         }
     }
 

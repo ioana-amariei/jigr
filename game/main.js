@@ -26,7 +26,7 @@ loadSavedGame.addEventListener('input', loadSavedGameHandler);
 
 function loadImageEventHandler(event) {
     if (!event.target.value) {
-        iqwerty.toast.Toast('Please select one!');
+        iqwerty.toast.Toast('Please select one!', options);
     } else {
         let reader = new FileReader();
         let imagePath = loadImage.files[0];
@@ -143,7 +143,7 @@ function onSaveEventHandler() {
 
 function loadSavedGameHandler(event) {
     if (!event.target.value) {
-        iqwerty.toast.Toast('Please select one!');
+        iqwerty.toast.Toast('Please select one!', options);
     } else {
         let reader = new FileReader();
         let file = loadSavedGame.files[0];
@@ -180,7 +180,6 @@ function resumeFromSavedGame(savedGame) {
         game.progress = gameData.progress;
         game.displayHelperImage = gameData.displayHelperImage;
         game.difficulty = gameData.difficulty;
-
         game.canvas.shapeDifficulty = gameData.canvas.shapeDifficulty;
 
         game.resume();
