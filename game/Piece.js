@@ -1,11 +1,9 @@
 class Piece {
-    constructor(randomLocation, finalLocation, width, height, row, column) {
-        this.x = randomLocation.x;
-        this.y = randomLocation.y;
+    constructor(currentLocation, finalLocation, width, height, row, column) {
+        this.currentLocation = currentLocation;
+        this.finalLocation = finalLocation;
         this.width = width;
         this.height = height;
-        this.finalX = finalLocation.x;
-        this.finalY = finalLocation.y;
         this.row = row;
         this.column = column;
         this.offsetX = -1;
@@ -16,13 +14,13 @@ class Piece {
 
     getEdgeMiddlePoint(edge) {
         if (edge === EdgeType.TOP) {
-            return new Point(this.x + (this.width / 2), this.y);
+            return new Point(this.currentLocation.x + (this.width / 2), this.currentLocation.y);
         } else if (edge === EdgeType.RIGHT) {
-            return new Point(this.x + this.width, this.y + (this.height / 2));
+            return new Point(this.currentLocation.x + this.width, this.currentLocation.y + (this.height / 2));
         } else if (edge === EdgeType.BOTTOM) {
-            return new Point(this.x + (this.width / 2), this.y + this.height);
+            return new Point(this.currentLocation.x + (this.width / 2), this.currentLocation.y + this.height);
         } else if (edge === EdgeType.LEFT) {
-            return new Point(this.x, this.y + (this.height / 2));
+            return new Point(this.currentLocation.x, this.currentLocation.y + (this.height / 2));
         } else {
             throw "Edge not defined: " + edge;
         }
@@ -33,19 +31,19 @@ class Piece {
             return false;
         }
 
-        if (click.y < this.y) {
+        if (click.y < this.currentLocation.y) {
             return false;
         }
 
-        if (click.y > this.y + this.height) {
+        if (click.y > this.currentLocation.y + this.height) {
             return false;
         }
 
-        if (click.x < this.x) {
+        if (click.x < this.currentLocation.x) {
             return false;
         }
 
-        if (click.x > this.x + this.width) {
+        if (click.x > this.currentLocation.x + this.width) {
             return false;
         }
 
@@ -53,13 +51,12 @@ class Piece {
     }
 
     move(click) {
-        this.x = click.x - this.offsetX;
-        this.y = click.y - this.offsetY;
+        this.currentLocation.x = click.x - this.offsetX;
+        this.currentLocation.y = click.y - this.offsetY;
     }
 
     moveToFinalLocation() {
-        this.x = this.finalX;
-        this.y = this.finalY;
+        this.currentLocation = this.finalLocation;
     }
 
     markAsSolved() {

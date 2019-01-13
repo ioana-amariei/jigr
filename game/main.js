@@ -25,7 +25,7 @@ let loadSavedGame = document.getElementById('load__saved__game');
 loadSavedGame.addEventListener('input', loadSavedGameHandler);
 
 function loadImageEventHandler(event) {
-    if (!event.target.value) {
+    if (event.target.value) {
         alert('Please Select One');
     } else {
         let reader = new FileReader();
@@ -192,12 +192,10 @@ function createPieces(pieces) {
     let pieceObjects = [];
     for (let piece of pieces) {
         let p = new Piece(new Point(), new Point(), 1, 1, 1, 1);
-        p.x = piece.x;
-        p.y = piece.y;
+        p.currentLocation = piece.currentLocation;
+        p.finalLocation = piece.finalLocation;
         p.width = piece.width;
         p.height = piece.height;
-        p.finalX = piece.finalX;
-        p.finalY = piece.finalY;
         p.row = piece.row;
         p.column = piece.column;
         p.offsetX = piece.offsetX;
@@ -212,6 +210,8 @@ function createPieces(pieces) {
 }
 
 let savedGame = window.localStorage.getItem("game-state");
-if (savedGame !== 'undefined') {
+if (savedGame !== null && savedGame !== 'undefined') {
+    console.log(localStorage);
+    console.log(savedGame);
     resumeFromSavedGame(savedGame);
 }

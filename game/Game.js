@@ -13,6 +13,7 @@ class Game {
         this.progressIncrement = 100 / this.pieces.length;
         this.displayHelperImage = false;
         this.difficulty = difficulty.pieceNumber;
+        this.snapTolerance = 100;
     }
 
     toggleDisplayHelperImageWithSolvedPuzzle(event) {
@@ -33,33 +34,40 @@ class Game {
 
     releasePiece() {
         if (this.clickedPieceIndex !== -1) {
-            let tmp = this.pieces[this.clickedPieceIndex];
+            let clickedPiece = this.pieces[this.clickedPieceIndex];
             this.pieces.splice(this.clickedPieceIndex, 1);
-            this.pieces.push(tmp);
+            this.pieces.push(clickedPiece);
 
             this.makePiecesVisible(this.pieces);
 
-            this.pieces[this.clickedPieceIndex].offsetX = 0;
-            this.pieces[this.clickedPieceIndex].offsetY = 0;
+            clickedPiece.offsetX = 0;
+            clickedPiece.offsetY = 0;
+
             this.checkSolved();
             this.clickedPieceIndex = -1;
         }
+    }
 
+    satisfiesSnapTolerance(x1, x2) {
+        return Math.abs(x1 - x2) < this.snapTolerance;
+    }
+
+    canBeSnapped(piece) {
+        let currentLocation = piece.currentLocation;
+        let finalLocation = piece.finalLocation;
+
+        let canBeSnappedByX = this.satisfiesSnapTolerance(currentLocation.x, finalLocation.x);
+        let canBeSnappedByY = this.satisfiesSnapTolerance(currentLocation.y, finalLocation.y);
+
+        return canBeSnappedByX && canBeSnappedByY;
     }
 
     checkSolved() {
-        let newX = this.pieces[this.clickedPieceIndex].x;
-        let newY = this.pieces[this.clickedPieceIndex].y;
-        let finalX = this.pieces[this.clickedPieceIndex].finalX;
-        let finalY = this.pieces[this.clickedPieceIndex].finalY;
+        let clickedPiece = this.pieces[this.clickedPieceIndex];
 
-        let snapTolerance = 100;
-
-        if (Math.abs(newX - finalX) < snapTolerance && Math.abs(newY - finalY) < snapTolerance) {
-            this.pieces[this.clickedPieceIndex].x = finalX;
-            this.pieces[this.clickedPieceIndex].y = finalY;
-            this.pieces[this.clickedPieceIndex].markAsSolved();
-
+        if (this.canBeSnapped(clickedPiece)) {
+            clickedPiece.moveToFinalLocation();
+            clickedPiece.markAsSolved();
             this.moveToSolvedPieces(this.clickedPieceIndex);
 
             this.progress += this.getProgressIncrement();
@@ -105,24 +113,23 @@ class Game {
 
         let self = this;
         this.clearAllIntervals();
-        setInterval(function () { self.drawPuzzlePieces(); }, 10);
+        setInterval(function () { self.drawPuzzlePieces(); }, 20);
     }
 
     clearAllIntervals() {
-        var lastIntervalId = window.setInterval("", 0);
-        for (var i = 1; i < lastIntervalId; i++) {
-            window.clearInterval(i);
+        let lastIntervalId = setInterval(() => { }, 0);
+        for (let i = 0; i <= lastIntervalId; i++) {
+            clearInterval(i);
         }
-
     }
 
     resume() {
-        this.clearAllIntervals();
-
         setGameProgressBar(game.progress);
         this.setupEventHandlers();
+
         let self = this;
-        setInterval(function () { self.drawPuzzlePieces(); }, 10);
+        this.clearAllIntervals();
+        setInterval(function () { self.drawPuzzlePieces(); }, 20);
     }
 
     initializePuzzle() {
@@ -133,17 +140,17 @@ class Game {
     }
 
     determineClickedPiece(click) {
-        let x = click.x;
-        let y = click.y;
-
         for (let i = this.pieces.length - 1; i >= 0; --i) {
-            if (this.pieces[i].isClicked(click)) {
+            let piece = this.pieces[i];
+
+            if (piece.isClicked(click)) {
                 this.clickedPieceIndex = i;
                 this.lastClickedPieceIndex = i;
                 this.hidePuzzlePieces();
-                this.pieces[i].makeVisible();
-                this.pieces[i].offsetX = x - this.pieces[i].x;
-                this.pieces[i].offsetY = y - this.pieces[i].y;
+                piece.makeVisible();
+                //TODO: refactor
+                piece.offsetX = click.x - piece.currentLocation.x;
+                piece.offsetY = click.y - piece.currentLocation.y;
                 return;
             }
         }
@@ -165,8 +172,8 @@ class Game {
         let self = this;
         document.onkeypress = function (event) { self.toggleDisplayHelperImageWithSolvedPuzzle(event); };
 
-        document.getElementById('random').addEventListener('click', onRandomSelectedEventHandler, false);
-        document.getElementById('currentlySelected').addEventListener('click', onCurrentlySelectedEventHandler, false);
+        document.getElementById('random__option').addEventListener('click', onRandomSelectedEventHandler, false);
+        // document.getElementById('currentlySelected').addEventListener('click', onCurrentlySelectedEventHandler, false);
 
         let onSave = ((document.ontouchstart !== null) ? 'mousedown' : 'touchstart');
         document.getElementById('save').addEventListener(onSave, onSaveEventHandler, false);
