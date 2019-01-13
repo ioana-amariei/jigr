@@ -31,7 +31,7 @@ Idei:
   - /puzzles?search=term (GET -> all puzzles for witch the term matches)
   - /puzzles (POST : url sau imagine propriu zisa si intoarce id-ul puzzle-ului generat)
  
- Puzzle games:
+ Resources:
 - http://www.raymondhill.net/puzzle-rhill/jigsawpuzzle-rhill.php
 - https://shout.setfive.com/2015/04/23/javascript-building-a-html5-canvas-puzzle/
 - http://www.custarddoughnuts.co.uk/jigsaw
@@ -39,3 +39,4 @@ Idei:
 - http://www.netzgesta.de/snapfit/
 - http://gavmac.github.io/jigsaw/
 - https://codepen.io/dearsaif/pen/mOjbLK
+- https://github.com/mlcheng/js-toast
