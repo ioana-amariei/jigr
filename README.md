@@ -32,6 +32,11 @@ Idei:
   - /puzzles (POST : url sau imagine propriu zisa si intoarce id-ul puzzle-ului generat)
  
  Resources:
+- https://developer.mozilla.org/kab/docs/Web/API/Canvas_API
+- https://developer.mozilla.org/en-US/docs/Web
+- https://stackoverflow.com/
+- https://iampava.com/cliw/
+- https://profs.info.uaic.ro/~busaco/teach/courses/cliw/
 - http://www.raymondhill.net/puzzle-rhill/jigsawpuzzle-rhill.php
 - https://shout.setfive.com/2015/04/23/javascript-building-a-html5-canvas-puzzle/
 - http://www.custarddoughnuts.co.uk/jigsaw
