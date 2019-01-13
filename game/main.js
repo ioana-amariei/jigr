@@ -26,7 +26,7 @@ loadSavedGame.addEventListener('input', loadSavedGameHandler);
 
 function loadImageEventHandler(event) {
     if (!event.target.value) {
-        alert('Please Select One');
+        iqwerty.toast.Toast('Please select one!');
     } else {
         let reader = new FileReader();
         let imagePath = loadImage.files[0];
@@ -143,7 +143,7 @@ function onSaveEventHandler() {
 
 function loadSavedGameHandler(event) {
     if (!event.target.value) {
-        alert('Please Select One');
+        iqwerty.toast.Toast('Please select one!');
     } else {
         let reader = new FileReader();
         let file = loadSavedGame.files[0];
@@ -155,7 +155,6 @@ function loadSavedGameHandler(event) {
 
 function resumeFromSavedGame(savedGame) {
     let gameData = JSON.parse(savedGame);
-    // console.log(gameData);
 
     let image = new Image();
     image.src = gameData.src;
@@ -192,16 +191,13 @@ function createPieces(pieces) {
     let pieceObjects = [];
     for (let piece of pieces) {
         let p = new Piece(new Point(), new Point(), 1, 1, 1, 1);
-        p.x = piece.x;
-        p.y = piece.y;
+        p.currentLocation = piece.currentLocation;
+        p.finalLocation = piece.finalLocation;
+        p.offsetToClickLocation = piece.offsetToClickLocation;
         p.width = piece.width;
         p.height = piece.height;
-        p.finalX = piece.finalX;
-        p.finalY = piece.finalY;
         p.row = piece.row;
         p.column = piece.column;
-        p.offsetX = piece.offsetX;
-        p.offsetY = piece.offsetY;
         p.visible = piece.visible;
         p.solved = piece.solved;
 
@@ -212,6 +208,7 @@ function createPieces(pieces) {
 }
 
 let savedGame = window.localStorage.getItem("game-state");
-if (savedGame !== 'undefined') {
+if (savedGame !== null && savedGame !== 'undefined') {
+    iqwerty.toast.Toast('Resuming the last played game!', options);
     resumeFromSavedGame(savedGame);
 }

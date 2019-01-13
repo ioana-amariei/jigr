@@ -119,31 +119,31 @@ class Canvas {
     drawPuzzlePieceBoundary(piece, rows, columns) {
         this.context.beginPath();
 
-        this.context.moveTo(piece.x, piece.y);
+        this.context.moveTo(piece.currentLocation.x, piece.currentLocation.y);
 
         if (piece.row > 0) {
             this.drawTopEdgeConnector(piece);
         }
 
-        this.context.lineTo(piece.x + piece.width, piece.y);
+        this.context.lineTo(piece.currentLocation.x + piece.width, piece.currentLocation.y);
 
         if (piece.column < columns - 1) {
             this.drawRightEdgeConnector(piece);
         }
 
-        this.context.lineTo(piece.x + piece.width, piece.y + piece.height);
+        this.context.lineTo(piece.currentLocation.x + piece.width, piece.currentLocation.y + piece.height);
 
         if (piece.row < rows - 1) {
             this.drawBottomEdgeConnector(piece);
         }
 
-        this.context.lineTo(piece.x, piece.y + piece.height);
+        this.context.lineTo(piece.currentLocation.x, piece.currentLocation.y + piece.height);
 
         if (piece.column > 0) {
             this.drawLeftEdgeConnector(piece);
         }
 
-        this.context.lineTo(piece.x, piece.y);
+        this.context.lineTo(piece.currentLocation.x, piece.currentLocation.y);
         this.context.closePath();
     }
 
@@ -158,8 +158,8 @@ class Canvas {
 
         this.context.clip();
 
-        let x = 0 - piece.finalX + piece.x;
-        let y = 0 - piece.finalY + piece.y;
+        let x = 0 - piece.finalLocation.x + piece.currentLocation.x;
+        let y = 0 - piece.finalLocation.y + piece.currentLocation.y;
 
         this.context.drawImage(this.image, x, y, this.canvas.width, this.canvas.height);
 
