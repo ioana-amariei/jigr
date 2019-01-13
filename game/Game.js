@@ -126,8 +126,6 @@ class Game {
         this.drawingEventHandlerId = setInterval(function () { self.drawPuzzlePieces(); }, 20);
     }
 
-
-
     initializePuzzle() {
         this.columns = this.difficulty;
         this.rows = this.difficulty;

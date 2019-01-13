@@ -155,7 +155,6 @@ function loadSavedGameHandler(event) {
 
 function resumeFromSavedGame(savedGame) {
     let gameData = JSON.parse(savedGame);
-    // console.log(gameData);
 
     let image = new Image();
     image.src = gameData.src;
@@ -210,6 +209,6 @@ function createPieces(pieces) {
 
 let savedGame = window.localStorage.getItem("game-state");
 if (savedGame !== null && savedGame !== 'undefined') {
-    iqwerty.toast.Toast('Resuming the last played game!');
+    iqwerty.toast.Toast('Resuming the last played game!', options);
     resumeFromSavedGame(savedGame);
 }
