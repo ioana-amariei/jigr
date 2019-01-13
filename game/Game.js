@@ -14,6 +14,7 @@ class Game {
         this.displayHelperImage = false;
         this.difficulty = difficulty.pieceNumber;
         this.snapTolerance = 100;
+        this.drawingEventHandlerId = null;
     }
 
     toggleDisplayHelperImageWithSolvedPuzzle(event) {
@@ -40,8 +41,7 @@ class Game {
 
             this.makePiecesVisible(this.pieces);
 
-            clickedPiece.offsetX = 0;
-            clickedPiece.offsetY = 0;
+            clickedPiece.offsetToClickLocation = new Point(0, 0);
 
             this.checkSolved();
             this.clickedPieceIndex = -1;
@@ -110,27 +110,23 @@ class Game {
     initializeGame() {
         this.initializePuzzle();
         this.setupEventHandlers();
-
-        let self = this;
-        this.clearAllIntervals();
-        setInterval(function () { self.drawPuzzlePieces(); }, 20);
-    }
-
-    clearAllIntervals() {
-        let lastIntervalId = setInterval(() => { }, 0);
-        for (let i = 0; i <= lastIntervalId; i++) {
-            clearInterval(i);
-        }
     }
 
     resume() {
         setGameProgressBar(game.progress);
         this.setupEventHandlers();
-
-        let self = this;
-        this.clearAllIntervals();
-        setInterval(function () { self.drawPuzzlePieces(); }, 20);
     }
+
+    clearDrawingHandler() {
+        window.clearInterval(this.drawingEventHandlerId);
+    }
+
+    setupDrawingHandler() {
+        let self = this;
+        this.drawingEventHandlerId = setInterval(function () { self.drawPuzzlePieces(); }, 20);
+    }
+
+
 
     initializePuzzle() {
         this.columns = this.difficulty;
@@ -148,9 +144,7 @@ class Game {
                 this.lastClickedPieceIndex = i;
                 this.hidePuzzlePieces();
                 piece.makeVisible();
-                //TODO: refactor
-                piece.offsetX = click.x - piece.currentLocation.x;
-                piece.offsetY = click.y - piece.currentLocation.y;
+                piece.offsetToClickLocation = new Point(click.x - piece.currentLocation.x, click.y - piece.currentLocation.y);
                 return;
             }
         }
@@ -177,6 +171,9 @@ class Game {
 
         let onSave = ((document.ontouchstart !== null) ? 'mousedown' : 'touchstart');
         document.getElementById('save').addEventListener(onSave, onSaveEventHandler, false);
+
+        this.clearDrawingHandler();
+        this.setupDrawingHandler();
     }
 
     movePiece(click) {

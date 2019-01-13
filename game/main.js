@@ -25,8 +25,8 @@ let loadSavedGame = document.getElementById('load__saved__game');
 loadSavedGame.addEventListener('input', loadSavedGameHandler);
 
 function loadImageEventHandler(event) {
-    if (event.target.value) {
-        alert('Please Select One');
+    if (!event.target.value) {
+        iqwerty.toast.Toast('Please select one!');
     } else {
         let reader = new FileReader();
         let imagePath = loadImage.files[0];
@@ -143,7 +143,7 @@ function onSaveEventHandler() {
 
 function loadSavedGameHandler(event) {
     if (!event.target.value) {
-        alert('Please Select One');
+        iqwerty.toast.Toast('Please select one!');
     } else {
         let reader = new FileReader();
         let file = loadSavedGame.files[0];
@@ -194,12 +194,11 @@ function createPieces(pieces) {
         let p = new Piece(new Point(), new Point(), 1, 1, 1, 1);
         p.currentLocation = piece.currentLocation;
         p.finalLocation = piece.finalLocation;
+        p.offsetToClickLocation = piece.offsetToClickLocation;
         p.width = piece.width;
         p.height = piece.height;
         p.row = piece.row;
         p.column = piece.column;
-        p.offsetX = piece.offsetX;
-        p.offsetY = piece.offsetY;
         p.visible = piece.visible;
         p.solved = piece.solved;
 
@@ -211,7 +210,6 @@ function createPieces(pieces) {
 
 let savedGame = window.localStorage.getItem("game-state");
 if (savedGame !== null && savedGame !== 'undefined') {
-    console.log(localStorage);
-    console.log(savedGame);
+    iqwerty.toast.Toast('Resuming the last played game!');
     resumeFromSavedGame(savedGame);
 }

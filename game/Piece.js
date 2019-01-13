@@ -2,12 +2,11 @@ class Piece {
     constructor(currentLocation, finalLocation, width, height, row, column) {
         this.currentLocation = currentLocation;
         this.finalLocation = finalLocation;
+        this.offsetToClickLocation = new Point(0, 0);
         this.width = width;
         this.height = height;
         this.row = row;
         this.column = column;
-        this.offsetX = -1;
-        this.offsetY = -1;
         this.visible = true;
         this.solved = false;
     }
@@ -51,8 +50,8 @@ class Piece {
     }
 
     move(click) {
-        this.currentLocation.x = click.x - this.offsetX;
-        this.currentLocation.y = click.y - this.offsetY;
+        this.currentLocation.x = click.x - this.offsetToClickLocation.x;
+        this.currentLocation.y = click.y - this.offsetToClickLocation.y;
     }
 
     moveToFinalLocation() {
