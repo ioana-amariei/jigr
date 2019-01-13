@@ -21,7 +21,10 @@ let locales = {
         save: "Save",
         difficulty: "Difficulty",
         game: "Game",
-        puzzleGeneration: "Puzzle generation"
+        pieceNumber: "Piece number",
+        pieceShape: "Piece shape",
+        resumeGameMessage: "Resuming the last played game!",
+        gameFinishedMessage: "Puzzle completed!"
     },
     ro: {
         helpAbout: "Despre",
@@ -45,17 +48,23 @@ let locales = {
         save: "Salveaza",
         difficulty: "Dificultate",
         game: "Joc",
-        puzzleGeneration: "Generare puzzle"
+        pieceNumber: "Numar piese",
+        pieceShape: "Forma piese",
+        resumeGameMessage: "Reluarea ultimului joc!",
+        gameFinishedMessage: "Puzzle finalizat!"
     }
     
 }
 
 function updateLocale(locale) {
+    localStorage.setItem('locale', locale);
     let localizedElements = document.getElementsByClassName("i18n");
-
+    
     for (localizedElement of localizedElements){
         let id = localizedElement.id;
         localizedElement.innerHTML = locales[locale][id];
     };
 }
 
+let currentlySelectedLocale = localStorage.getItem('locale') || 'en';
+updateLocale(currentlySelectedLocale);
