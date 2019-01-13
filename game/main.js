@@ -141,6 +141,7 @@ function onSaveEventHandler() {
     document.body.removeChild(anchor);
 }
 
+// https://stackoverflow.com/questions/750032/reading-file-contents-on-the-client-side-in-javascript-in-various-browsers
 function loadSavedGameHandler(event) {
     if (!event.target.value) {
         iqwerty.toast.Toast('Please select one!', options);
@@ -208,6 +209,9 @@ function createPieces(pieces) {
 
 let savedGame = window.localStorage.getItem("game-state");
 if (savedGame !== null && savedGame !== 'undefined') {
-    iqwerty.toast.Toast('Resuming the last played game!', options);
+    let locale = localStorage.getItem('locale') || 'en';
+    let message = locales[locale].resumeGameMessage;
+    
+    iqwerty.toast.Toast(message, options);
     resumeFromSavedGame(savedGame);
 }

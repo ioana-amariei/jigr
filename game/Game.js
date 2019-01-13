@@ -110,9 +110,12 @@ class Game {
             this.drawHelperImageWithSolvedPuzzle();
         }
 
-        if(this.isOver()) {
+        if (this.isOver()) {
             this.clearDrawingHandler();
-            iqwerty.toast.Toast('Puzzle completed', options);
+            
+            let locale = localStorage.getItem('locale') || 'en';
+            let message = locales[locale].gameFinishedMessage;
+            iqwerty.toast.Toast(message, options);
         }
     }
 
