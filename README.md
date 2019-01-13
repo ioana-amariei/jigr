@@ -31,3 +31,18 @@ Idei:
   - /puzzles?search=term (GET -> all puzzles for witch the term matches)
   - /puzzles (POST : url sau imagine propriu zisa si intoarce id-ul puzzle-ului generat)
  
+ Resources:
+- https://developer.mozilla.org/kab/docs/Web/API/Canvas_API
+- https://developer.mozilla.org/en-US/docs/Web
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+- https://stackoverflow.com/
+- https://iampava.com/cliw/
+- https://profs.info.uaic.ro/~busaco/teach/courses/cliw/
+- http://www.raymondhill.net/puzzle-rhill/jigsawpuzzle-rhill.php
+- https://shout.setfive.com/2015/04/23/javascript-building-a-html5-canvas-puzzle/
+- http://www.custarddoughnuts.co.uk/jigsaw
+- https://coursesweb.net/javascript/image-puzzle-game-script
+- http://www.netzgesta.de/snapfit/
+- http://gavmac.github.io/jigsaw/
+- https://codepen.io/dearsaif/pen/mOjbLK
+- https://github.com/mlcheng/js-toast

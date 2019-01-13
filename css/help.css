@@ -53,3 +53,10 @@
 #help__container #help__container__grid li{
     list-style-type: none;
 }
+
+/* MOBILE */
+@media all and (max-width: 700px) {
+    #access_nav {
+        display: none;
+    }
+}

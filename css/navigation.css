@@ -29,7 +29,7 @@
 }
 
 #progress__bar {
-    width: 30%;
+    width: 0%;
     padding: 10px 0px;
     background-color: #2980b9;
 }
@@ -49,6 +49,7 @@
 
 .play {
     color: white;
+    height: 100%;
 }
 
 .dropup {
@@ -61,7 +62,7 @@
     position: absolute;
     background-color: white;
     min-width: 180px;
-    bottom: 64px;
+    bottom: 63px;
     margin: 0;
     padding: 0;
     border: 1px solid rgba(0,0,0,.15);
@@ -184,6 +185,27 @@ input[type="range"]::-moz-range-track {
 }
 
 /* MOBILE */
+@media all and (max-width: 300px) {
+    #canvas {
+        height: 220px;
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    #canvas {
+        height: 300px;
+        width: 480px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    #canvas {
+        height: 400px;
+        width: 900px;
+    }
+}
+
 @media all and (max-width: 700px) {
     .container {
         background-color: #ebf5fb;
@@ -219,7 +241,7 @@ input[type="range"]::-moz-range-track {
       
     .arrow__down {
         border-top: 20px solid #2980b9;
-        bottom: 180px;
+        bottom: 210px;
     }
 
     .bottom__nav {
@@ -245,5 +267,10 @@ input[type="range"]::-moz-range-track {
     
     .progress, .github, .css{
         display: none;
+    }
+
+    #canvas {
+        height: 220px;
+        width: 400px;
     }
 }
