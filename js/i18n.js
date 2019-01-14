@@ -78,7 +78,10 @@ let locales = {
         save: "сохранить",
         difficulty: "сложности",
         game: "игра",
-        puzzleGeneration: "Генерировать головоломку"
+        pieceNumber: "Номер части",
+        pieceShape: "Форма фигуры",
+        resumeGameMessage: "Возобновление последней сыгранной игры !",
+        gameFinishedMessage: "Головоломка завершена !"
     },
 
     fr: {
@@ -103,7 +106,10 @@ let locales = {
         save: "Sauver",
         difficulty: "Difficulté",
         game: "Jeu",
-        puzzleGeneration: "Générer des puzzle"
+        pieceNumber: "Numéro de pièce",
+        pieceShape: "Pièce de forme",
+        resumeGameMessage: "Reprise du dernier jeu joué!",
+        gameFinishedMessage: "Puzzle terminé !"
     }
 }
 
