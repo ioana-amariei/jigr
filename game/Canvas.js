@@ -10,7 +10,7 @@ class Canvas {
         this.maxWidth = 1350;
         this.maxHeight = 680;
 
-        this.shapeDifficulty = 9 - pieceShape;
+        this.shapeDifficulty = 8 - pieceShape;
 
         this.setCanvasSize();
     }

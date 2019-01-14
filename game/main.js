@@ -87,7 +87,7 @@ function onResetEventHandler() {
 
     let difficulty = new Difficulty(pieceNumber.value, pieceShape.value);
     game.difficulty = difficulty.pieceNumber;
-    game.canvas.shapeDifficulty = 9 - difficulty.pieceShape;
+    game.canvas.shapeDifficulty = 8 - difficulty.pieceShape;
 
     setGameProgressBar(0);
 
