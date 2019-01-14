@@ -7,7 +7,7 @@ let options = {
 			color: '#2980b9',
 			padding: '25px 15px',
 			'box-shadow': '4px 4px 4px #2980b9',
-			'border-radius': '50px'
+			'border-radius': '25px'
 		}
 	},
 	settings: {

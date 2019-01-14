@@ -7,6 +7,7 @@ https://shout.setfive.com/2015/04/23/javascript-building-a-html5-canvas-puzzle/
 let game;
 
 window.addEventListener("beforeunload", function () {
+    console.log("event");
     window.localStorage.setItem('game-state', JSON.stringify(game));
 });
 
@@ -190,7 +191,7 @@ function resumeFromSavedGame(savedGame) {
 function createPieces(pieces) {
     let pieceObjects = [];
     for (let piece of pieces) {
-        let p = new Piece(new Point(), new Point(), 1, 1, 1, 1);
+        let p = new Piece(new Point(), new Point());
         p.currentLocation = piece.currentLocation;
         p.finalLocation = piece.finalLocation;
         p.offsetToClickLocation = piece.offsetToClickLocation;
@@ -211,7 +212,9 @@ let savedGame = window.localStorage.getItem("game-state");
 if (savedGame !== null && savedGame !== 'undefined') {
     let locale = localStorage.getItem('locale') || 'en';
     let message = locales[locale].resumeGameMessage;
-    
+    // console.log("local storage length: " + localStorage.length);
+    // console.log("locale: " + locale);
+    // console.log("saved game: " + savedGame);
     iqwerty.toast.Toast(message, options);
     resumeFromSavedGame(savedGame);
 }
