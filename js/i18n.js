@@ -23,8 +23,8 @@ let locales = {
         game: "Game",
         pieceNumber: "Piece number",
         pieceShape: "Piece shape",
-        resumeGameMessage: "Resuming the last played game!",
-        gameFinishedMessage: "Puzzle completed!"
+        resumeGameMessage: "Resuming the last played game !",
+        gameFinishedMessage: "Puzzle completed !"
     },
     ro: {
         helpAbout: "Despre",
@@ -51,8 +51,8 @@ let locales = {
         puzzleGeneration: "Generare puzzle",
         pieceNumber: "Numar piese",
         pieceShape: "Forma piese",
-        resumeGameMessage: "Reluarea ultimului joc!",
-        gameFinishedMessage: "Puzzle finalizat!"
+        resumeGameMessage: "Reluarea ultimului joc !",
+        gameFinishedMessage: "Puzzle finalizat !"
       
     },
     
