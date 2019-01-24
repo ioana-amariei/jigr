@@ -6,7 +6,7 @@ Play the game: https://ioanabirsan.github.io/jigr/
 ### Project Documentation
 * Technical Report: https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/technical-report.html
 * User Guide: https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/user-guide.html
-* Demo Video: https://www.youtube.com/watch?v=PcytPEx8Z3U&feature=youtu.be
+* Demo Video: https://youtu.be/PcytPEx8Z3U
 ### Development workflow
 0. The first time you should clone the project locally. This step should be skipped in future iterations.
 1. Checkout to master and pull the latest version from github locally before adding any other code. **This should be done each time you want to make changes starting from the latest master changes:** 
