@@ -4,7 +4,8 @@ Play the game: https://ioanabirsan.github.io/jigr/
 **`project, infoiasi, cliw, web`**
 
 ### Project Documentation
-* https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/index.html
+* Technical Report: https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/technical-report.html
+* User Guide: https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/user-guide.html
 
 ### Development workflow
 0. The first time you should clone the project locally. This step should be skipped in future iterations.
