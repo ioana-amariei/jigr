@@ -212,9 +212,6 @@ let savedGame = window.localStorage.getItem("game-state");
 if (savedGame !== null && savedGame !== 'undefined') {
     let locale = localStorage.getItem('locale') || 'en';
     let message = locales[locale].resumeGameMessage;
-    // console.log("local storage length: " + localStorage.length);
-    // console.log("locale: " + locale);
-    // console.log("saved game: " + savedGame);
     iqwerty.toast.Toast(message, options);
     resumeFromSavedGame(savedGame);
 }
