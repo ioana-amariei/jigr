@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>jigr (Jigsaw Web Manager)</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+
+    <style>
+        p,
+        li,
+        ol {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body itemscope="itemscope" itemtype="https://schema.org/ScholarlyArticle">
+    <header itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+        <div class="banner">
+            <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="scholarly-html.svg" width="227"
+                height="50" alt="Scholarly HTML logo">
+            <div class="status">Community Draft</div>
+        </div>
+        <h1 itemscope="itemscope" itemtype="https://schema.org/Game">jigr - User guide</h1>
+        <code itemscope="itemscope" itemtype="https://schema.org/CollegeOrUniversity" style=" font-weight:bold;">project, infoiasi, cliw,  web</code>
+    </header>
+
+    <div role="contentinfo">
+        <dl>
+            <dt>Authors</dt>
+            <dd>
+                <i style="font-size:large;">Birsan Ioana, Cumpata Lucian</i>
+            </dd>
+            <dt>Project link</dt>
+            <dd>
+                <a href="https://github.com/ioanabirsan/jigr">https://github.com/ioanabirsan/jigr </a>
+            </dd>
+        </dl>
+    </div>
+
+    <section id="introduction" role="doc-introduction">
+        <h2>About the game</h2>
+        <p style="font-size:large;">
+            This Web application allows solving puzzles proposed by the program or defined by users.
+            Each player will be able to select - locally or remotely via a URL - an image that will be cropped at
+            runtime into fragments as complicated as possible.
+            The pieces will be mixed, the shifts / swings can be performed via drag & drop operations.
+            The application will also provide support for snap placement in the right area.
+            The current status of each puzzle can be saved locally with the possibility of subsequent restoration.
+            The game can also be played offline (directly in the Web browser without the need for Internet access).
+        </p>
+    </section>
+
+    <section id="help">
+        <h2>Help section</h2>
+        <p>
+            A <b>Help</b> section is also available in the application, and by selecting it you will have access to
+            additional information that can help you during the game.
+        </p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/help.png" alt="help option" style="width:750px; height:475px;">
+    </section>
+
+    <section id="play-option">
+        <h2>Play</h2>
+        <p style="font-size:large;">A new game can be started by either loading a image from the <b>local storage</b>,
+            or by using an <b>URL</b>.</p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/play.png" alt="play options"
+            style="width:750px; height:475px;">
+        <p>After selecting the image, the split image will appear on the screen in randomly displayed puzzle pieces.</p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/start-game.png" alt="display start game"
+            style="width:750px; height:475px;">
+    </section>
+    <p>
+        Also, as more and more pieces are solved, the progress of the game is updated.
+    </p>
+
+    <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/progress.png" alt="about progress"
+        style="width:750px; height:475px;">
+
+    <section id="solve-piece">
+        <h2>Solve piece</h2>
+        <p>
+            When selecting <b>Solve piece</b> a randomly selected puzzle piece will be moved to its final location.
+        </p>
+    </section>
+
+    <section id="reset">
+        <h2>Reset</h2>
+        <p>
+            <b>Reset</b> button will restart the game from a new randomly generated state.
+        </p>
+    </section>
+
+    <section id="reset">
+        <h2>Save</h2>
+        <p>
+            You can also save the progress of the current game; this will provide the possibility to resume the game at
+            a later time.
+        </p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/save.png" alt="save game option"
+            style="width:750px; height:475px;">
+    </section>
+
+    <section id="load">
+        <h2>Load</h2>
+        <p>
+            The game also offers the possibility of loading a game from a previously saved state.
+        </p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/load.png" alt="load game option"
+            style="width:750px; height:475px;">
+    </section>
+
+    <section id="difficulty">
+        <h2>Difficulty</h2>
+        <p>
+            The difficulty of the game can be controlled in several directions:
+            <ul>
+                <li>
+                    The number of pieces to generate for the new puzzle
+                </li>
+                <li>
+                    The shape of those pieces
+                </li>
+            </ul>
+        </p>
+        <p>
+            Initially, the difficulty of the game is preset at a minimal to medium level.
+            This can be changed during the game, and by selecting the <b>Reset</b> button, it will be updated according
+            to the currently selected option.
+        </p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/piece-shape.png" alt="difficulty options"
+            style="width:750px; height:475px;">
+    </section>
+
+    <section id="space key">
+        <h2>Space key</h2>
+        <p>
+            To help the user, the game also offers the following functionality: by pressing the <b>Space key</b>, he
+            will be able to view the full image.
+        </p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/space-key.png" alt="space key"
+            style="width:750px; height:475px;">
+    </section>
+
+    <section id="language">
+        <h2>Language</h2>
+        <p>
+            The game is available in 4 languages: English, Romanian, Russian and French. You can select the desired
+            language by pressing the <b>Language</b> button.
+        </p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/language.png" alt="language options"
+            style="width:750px; height:475px;">
+    </section>
+
+    <section id="reload-page">
+        <h2>Reload page</h2>
+        <p>
+            When the application is reopened, at a later time, it will first check to see if there is a previous game
+            saved at the predefined key in the Local Storage, and it will resume it;
+            otherwise, it will present the user the normal flow. When reloading the game page, a notification will
+            appear on the screen.
+        </p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/reload.png" alt="reload page"
+            style="width:750px; height:475px;">
+    </section>
+
+
+    <section id="puzzle-completion">
+        <h2>Puzzle completion</h2>
+        <p>
+            Upon completion of the puzzle, a message will appear on the screen to notify the user of this event.
+        </p>
+        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="img/game-over.png" alt="puzzle completion"
+            style="width:750px; height:475px;">
+    </section>
+
+</body>
+
+</html>
