@@ -25,11 +25,23 @@ let locales = {
         pieceNumber: "Piece number",
         pieceShape: "Piece shape",
         resumeGameMessage: "Resuming the last played game !",
-        gameFinishedMessage: "Puzzle completed !"
+        gameFinishedMessage: "Puzzle completed !",
+        helpPlay: "Play",
+        helpReset: "Reset",
+        helpSave: "Save",
+        helpLoad: "Load",
+        helpSolvePiece: "Solve piece",
+        helpDifficulty: "Difficulty"
     },
     ro: {
         helpAbout: "Despre",
         helpMadeBy: "Dezvoltat de",
+        helpPlay: "Joaca",
+        helpReset: "Reseteaza",
+        helpSave: "Salveaza",
+        helpLoad: "Incarca",
+        helpSolvePiece: "Rezolva piesa",
+        helpDifficulty: "Dificultate",
         helpDescribePlay: "Incepe un nou joc fie prin selectarea unei imagini de pe sistemul de fisiere local, ori furnizand URL-ul catre o imagine.",
         helpDescribeSolvePiece: "Muta o piesa aleasa aleatoriu pe pozitia sa finala.",
         helpDescribeLoad: "Continua un joc folosind o stare salvata anterior.",
@@ -55,7 +67,6 @@ let locales = {
         pieceShape: "Forma piese",
         resumeGameMessage: "Reluarea ultimului joc !",
         gameFinishedMessage: "Puzzle finalizat !"
-      
     },
     
     ru: {
