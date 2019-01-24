@@ -9,21 +9,23 @@
     <script src="js/scholarly.min.js"></script>
 
     <style>
-        p, li, ol {
+        p,
+        li,
+        ol {
             font-size: large;
         }
     </style>
 </head>
 
-<body itemscope="itemscope" itemtype="https://schema.org/ScholarlyArticle"> 
+<body itemscope="itemscope" itemtype="https://schema.org/ScholarlyArticle">
     <header itemscope="itemscope" itemtype="https://schema.org/WPHeader">
-    <div class="banner">
-        <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="scholarly-html.svg" width="227"
-            height="50" alt="Scholarly HTML logo">
-        <div class="status">Community Draft</div>
-    </div>
-    <h1 itemscope="itemscope" itemtype="https://schema.org/Game">jigr (Jigsaw Web Manager)</h1>
-    <code itemscope="itemscope" itemtype="https://schema.org/CollegeOrUniversity" style=" font-weight:bold;">project, infoiasi, cliw,  web</code>
+        <div class="banner">
+            <img itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="scholarly-html.svg" width="227"
+                height="50" alt="Scholarly HTML logo">
+            <div class="status">Community Draft</div>
+        </div>
+        <h1 itemscope="itemscope" itemtype="https://schema.org/Game">jigr (Jigsaw Web Manager)</h1>
+        <code itemscope="itemscope" itemtype="https://schema.org/CollegeOrUniversity" style=" font-weight:bold;">project, infoiasi, cliw,  web</code>
     </header>
 
     <div role="contentinfo">
@@ -64,11 +66,13 @@
                     <li style="font-size:large;">help area for more information regarding the game and how to play it</li>
                     <li style="font-size:large;">progress view area</li>
                     <li style="font-size:large;">play area for choosing an image, either locally or remotely via a URL</li>
-                    <li style="font-size:large;">the possibility of receiving a hint for solving a random piece and view the entire image by pressing the Space key</li>
+                    <li style="font-size:large;">the possibility of receiving a hint for solving a random piece and
+                        view the entire image by pressing the Space key</li>
                     <li style="font-size:large;">the ability to reset the game to its original state</li>
                     <li style="font-size:large;">load section for importing last played game state</li>
                     <li style="font-size:large;">save the current state of the game</li>
-                    <li style="font-size:large;">difficulty selection for both the number of pieces to generate and pieces shapes.</li>
+                    <li style="font-size:large;">difficulty selection for both the number of pieces to generate and
+                        pieces shapes.</li>
                 </ul>
             </li>
             <li style="font-size:large;">
@@ -93,8 +97,10 @@
 
     <section id="user-interaction">
         <h2>User interaction</h2>
-        <p style="font-size:large;">The user will interact with the application using the following mechanisms: keyboard and mouse.
-            He will be able to use the keyboard to visualize the entire image. The mouse can be used to drag pieces around and rotate them.</p>
+        <p style="font-size:large;">The user will interact with the application using the following mechanisms:
+            keyboard and mouse.
+            He will be able to use the keyboard to visualize the entire image. The mouse can be used to drag pieces
+            around and rotate them.</p>
     </section>
 
     <section id="source-code-management">
@@ -158,7 +164,7 @@
                     After all the necessary code is retrieved in the context
                     of the first page load, the game/application will be able to provide
                     its functionality without interacting with the backend.
-                </p>    
+                </p>
                 <p>
                     The role of the backend will be to serve just static content in
                     our case, without the role of generating dynamic content.
@@ -168,8 +174,8 @@
             <li style="font-size:large;">
                 <h4>High-level components</h4>
                 <p>
-                    In this section we will depict the high-level architecture of the 
-                    application. 
+                    In this section we will depict the high-level architecture of the
+                    application.
                 </p>
                 <img src="diagrams/component/high-level.png" alt="High level">
             </li>
@@ -186,50 +192,49 @@
                 <img src="diagrams/class/control.png" alt="Control">
             </li>
             <li style="font-size:large;">
-                    <h4>Sequence</h4>
-                    <p>
-                        In this section we will depict sequence diagrams.
-                    </p>
-                    Playing a game
-                    <img src="diagrams/sequence/play-game.png" alt="play game">
-                </li>
-    
-    
+                <h4>Sequence</h4>
+                <p>
+                    In this section we will depict sequence diagrams.
+                </p>
+                Playing a game
+                <img src="diagrams/sequence/play-game.png" alt="play game">
+            </li>
+
+
             <li style="font-size:large;">
                 Data storage
                 <ul>
                     <li style="font-size:large;">
                         <h4>Storage Technologies</h4>
-                        While running, the application will store its data in 
+                        While running, the application will store its data in
                         JavaScript objects.
-                
-                        In order to improve the User Experience, we would like 
-                        to offer the user the possibility to persist the game 
+
+                        In order to improve the User Experience, we would like
+                        to offer the user the possibility to persist the game
                         state to enable him to resume the game at a later time.
                         To accomplish this, we will use two techniques:
-                
+
                         <h5>Web Storage API: Local Storage</h5>
-                            We will use the Web Storage API Local Storage mechanism 
-                            in order to persist the game state when the <strong>browser.tabs.onRemoved</strong> event is 
-                            triggered. 
-                
-                            <p>
-                            The data will be saved using a predefined key and it will 
+                        We will use the Web Storage API Local Storage mechanism
+                        in order to persist the game state.
+
+                        <p>
+                            The data will be saved using a predefined key and it will
                             be represented by a JavaScript object.
-                            </p>
-                
-                            When the application is reopened, at a later time, it 
-                            will first check to see if there is a previous game 
-                            saved at the predefined key in the Local Storage, and it will 
-                            resume it; otherwise, it will present the user the normal flow.
-                
+                        </p>
+
+                        When the application is reopened, at a later time, it
+                        will first check to see if there is a previous game
+                        saved at the predefined key in the Local Storage, and it will
+                        resume it; otherwise, it will present the user the normal flow.
+
                         <h5>Files</h5>
-                            The user will also have the possibility the save 
-                            the game state externally, in a file, in JSON format.
-                
-                            If the user wants to resume the game at a later time, 
-                            possibly in another browser, or on another computer, he 
-                            can load the saved game file and it will resume it from the saved state.
+                        The user will also have the possibility the save
+                        the game state externally, in a file, in JSON format.
+
+                        If the user wants to resume the game at a later time,
+                        possibly in another browser, or on another computer, he
+                        can load the saved game file and it will resume it from the saved state.
                     </li>
                     <li style="font-size:large;">
                         <h4>Data Structure</h4>
@@ -247,17 +252,17 @@
                                 // Possibly other
                             }
                         </pre>
-                        
+
                     </li>
                 </ul>
             </li>
             <li style="font-size:large;">
-                <h4>Internationalization and Localization</h4>                         
-                        <h5>Localization</h5>
-                
-                          We can define a <strong>locales</strong> object that stores the localized strings for each language:
+                <h4>Internationalization and Localization</h4>
+                <h5>Localization</h5>
 
-                          <pre>
+                We can define a <strong>locales</strong> object that stores the localized strings for each language:
+
+                <pre>
                             let locales = {
                                 en: {
                                     language: "EN",
@@ -280,15 +285,16 @@
                             }
                           }
                         </pre>
-                        <h5>Internationalization</h5>
-                          Each internationalized element in HTML will be encapsulated in a <strong>span</strong> element. 
-                          All <strong>span</strong> elements will have the same class and a distinct <strong>id</strong> which will 
-                          identify the key to be used for each locale.
-                
-                          When the user selects a language, a JavaScript function call will be triggered which will process the 
-                          <strong>span</strong> elements and updates their text accordingly.
-                
-                        <pre>
+                <h5>Internationalization</h5>
+                Each internationalized element in HTML will be encapsulated in a <strong>span</strong> element.
+                All <strong>span</strong> elements will have the same class and a distinct <strong>id</strong> which
+                will
+                identify the key to be used for each locale.
+
+                When the user selects a language, a JavaScript function call will be triggered which will process the
+                <strong>span</strong> elements and updates their text accordingly.
+
+                <pre>
                             function updateLocale(locale) {
                                 let localizedElements = document.getElementsByClassName("i18n");
                             
@@ -297,21 +303,95 @@
                                     localizedElement.innerHTML = locales[locale][id];
                                 };
                             }
-                        </pre>    
+                        </pre>
 
-                        Alternatives we managed to find on the Web:
-        
-                        <ul>
-                            <li>ECMAScript Internationalization API Specification: http://ecma-international.org/ecma-402/1.0/</li>
-                        
-                            <li>FormatJS: https://formatjs.io/</li>
-                        
-                            <li>IntlMessageFormat: https://github.com/yahoo/intl-messageformat </li>
+                Alternatives we managed to find on the Web:
 
-                            <li>Other: https://www.sitepen.com/blog/2017/07/19/the-state-of-internationalization-in-javascript/</li>
-                        </ul>
+                <ul>
+                    <li>ECMAScript Internationalization API Specification: http://ecma-international.org/ecma-402/1.0/</li>
+
+                    <li>FormatJS: https://formatjs.io/</li>
+
+                    <li>IntlMessageFormat: https://github.com/yahoo/intl-messageformat </li>
+
+                    <li>Other: https://www.sitepen.com/blog/2017/07/19/the-state-of-internationalization-in-javascript/</li>
+                </ul>
             </li>
         </ol>
+    </section>
+
+    <section id="project-progress">
+        <h2>Project progress, testing and functional exploitation</h2>
+        <p>
+            The project was developed in an iterative manner:
+            <ul>
+                <li>
+                    in the first instance, the upload functionality of an image from the local file system and from the
+                    remote URL was added
+                </li>
+                <li>
+                    the next stage consisted of dividing the image into rectangular pieces, keeping the ratio of each
+                    piece relative to the original image
+                </li>
+                <li>
+                    used the arc method from the Canvas.API; this has provided the ability
+                    to draw puzzle pieces with semi-circular shapes;
+                    this arcs are drawn either in the ouside or the inside of the piece
+                </li>
+                <li>
+                    implemented drag and drop functionality, providing support for the exact placement of a piece in
+                    the final location
+                </li>
+                <li>
+                    implemented the ability to solve a random piece randomly
+                </li>
+                <li>
+                    updating the progress bar as the pieces were resolved
+                </li>
+                <li>
+                    reset the current state of the game
+                </li>
+                <li>
+                    provided language support for 4 different languages; this was updated progressively
+                </li>
+                <li>
+                    implemented the functionality to save the current state of the game to the local system in a json file, with the possibility of resuming the saved game at a later time
+                </li>
+                <li>
+                    used the Web Storage API Local Storage mechanism in order to persist the game state;
+                    when the application is reopened, at a later time, it  will first check to see if there is a previous game
+                    saved at the predefined key in the Local Storage, and it will resume it; otherwise, it will present the user the normal flow
+                </li>
+                <li>
+                    used <a href="https://ireade.github.io/Toast.js/" itemscope itemtype="https://schema.org/URL">Toast.js</a> to display notifications when the puzzle is finished or when the game page is reloaded
+                </li>
+            </ul>
+        <p>
+            As far as testing is concerned, it was executed manually as the functionality was developed.
+        </p>
+        <p>
+            In terms of practical exploitation of the solution achieved we used <a href="http://ecma-international.org/ecma-402/1.0/"
+                itemscope itemtype="https://schema.org/URL">GitHub Pages</a>
+            as a web hosting service offered by GitHub for hosting static web pages for GitHub users.
+            You can play the game at the following address: <a href="https://ioanabirsan.github.io/jigr/" itemscope
+                itemtype="https://schema.org/URL">https://ioanabirsan.github.io/jigr/</a>.
+        </p>
+    </section>
+
+    <section id="future-improvments">
+        <h2>Future improvements</h2>
+        <ul>
+            <li>
+                the ability to redraw only the current selected piece, not the entire canvas, with the aim of improving
+                performance
+            </li>
+            <li>
+                the possibility to draw puzzle pieces having shapes of incresed complexity
+            </li>
+            <li>
+                the ability to rotate the pieces
+            </li>
+        </ul>
     </section>
 
     <section id="web-dev-tools">
