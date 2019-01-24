@@ -36,14 +36,21 @@
                 </ul>
             </div>
             <div>
-                <b>♘ <span class="i18n" id="helpPlay">Play</span></b>
+                <b><span class="i18n" id="helpMoreInfo">More information</span></b>
+                <ul>
+                    <li><a href="https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/user-guide.html">User guide</a></li>
+                    <li><a href="https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/technical-report.html">Technical report</a></li>
+                </ul>
+            </div>
+            <div>
+                <b>&#x2658; <span class="i18n" id="helpPlay">Play</span></b>
                 <ul>
                     <li><span class="i18n" id="helpDescribePlay">Starts the game. A new game can be started by either
                             loading a image from the local storage, or by using an URL.</span></li>
                 </ul>
             </div>
             <div>
-                <b>⚝ <span class="i18n" id="helpSolvePiece">Solve piece</span></b>
+                <b>&#x2605; <span class="i18n" id="helpSolvePiece">Solve piece</span></b>
                 <ul>
                     <li><span class="i18n" id="helpDescribeSolvePiece">Moves a randomly selected puzzle piece to its final
                             location.</span></li>
@@ -51,7 +58,7 @@
             </div>
 
             <div>
-                <b>↻ <span class="i18n" id="helpReset">Reset</span></b>
+                <b>&#x21bb; <span class="i18n" id="helpReset">Reset</span></b>
                 <ul>
                     <li>
                         <span class="i18n" id="helpDescribeReset">Restart the game from a new randomly generated state.</span>
@@ -59,21 +66,21 @@
                 </ul>
             </div>
             <div>
-                <b>🗁 <span class="i18n" id="helpLoad">Load</span></b>
+                <b>&#x1f4be; <span class="i18n" id="helpLoad">Load</span></b>
                 <ul>
                     <li><span class="i18n" id="helpDescribeLoad">Resume a game from a previously saved state.</span></li>
                 </ul>
             </div>
 
             <div>
-                <b>🖫 <span class="i18n" id="helpSave">Save</span></b>
+                <b>&#x1f4be; <span class="i18n" id="helpSave">Save</span></b>
                 <ul>
                     <li><span class="i18n" id="helpDescribeSave">Save the progress of the current game; this will provide the possibility to resume the game at a later time.</span></li>
                 </ul>
             </div>
 
             <div>
-                <b>∞ <span class="i18n" id="helpDifficulty">Difficulty</span></b>
+                <b>&#x221e; <span class="i18n" id="helpDifficulty">Difficulty</span></b>
                 <ul>
                     <li><span class="i18n" id="helpDescribeDifficulty">The difficulty of the game can be controlled in several directions: 1. The number of pieces to generate for the new puzzle; 2. The shape of those pieces.</span></li>
                 </ul>
@@ -99,7 +106,7 @@
             </div>
 
             <div class="dropup">
-                <button class="bottom__nav play" type="button"><b>♘</b> <span class="i18n" id="play">Play</span></button>
+                <button class="bottom__nav play" type="button"><b>&#x2658;</b> <span class="i18n" id="play">Play</span></button>
                 <div class="dropup__options">
                     <label class="description" for="load__image"><span class="i18n" id="chooseImageToUpload">Choose
                             image to upload</span></label>
@@ -110,17 +117,17 @@
             </div>
 
             <div class="dropup">
-                <button class="bottom__nav solve"><b>⚝</b> <span class="i18n" id="solvePiece">Solve piece</span></button>
+                <button class="bottom__nav solve"><b>&#x2605;</b> <span class="i18n" id="solvePiece">Solve piece</span></button>
                 <div class="dropup__options">
                     <!-- <a class="bottom__border" href="#"><span class="i18n" id="currentlySelected">Currently selected</span></a> -->
                     <a id="random__option" href="#"><span class="i18n" id="random">Random</span></a>
                 </div>
             </div>
 
-            <button id="reset__option" class="bottom__nav reset" type="button"><b>↻</b> <span class="i18n" id="reset">Reset</span></button>
+            <button id="reset__option" class="bottom__nav reset" type="button"><b>&#x21bb;</b> <span class="i18n" id="reset">Reset</span></button>
 
             <div class="dropup">
-                <button class="bottom__nav load" type="button"><b>🗁</b> <span class="i18n" id="load">Load</span></button>
+                <button class="bottom__nav load" type="button"><b>&#x1f4be;</b> <span class="i18n" id="load">Load</span></button>
                 <div class="dropup__options">
                     <label class="description" for="load__saved__game"><span class="i18n" id="loadSavedGame">Load saved
                             game</span></label>
@@ -128,10 +135,10 @@
                 </div>
             </div>
 
-            <button id="save__option" class="bottom__nav save" type="button"><b>🖫</b> <span class="i18n" id="save">Save</span></button>
+            <button id="save__option" class="bottom__nav save" type="button"><b>&#x1f4be;</b> <span class="i18n" id="save">Save</span></button>
 
             <div class="dropup">
-                <button class="bottom__nav difficulty" type="button"><b>∞</b> <span class="i18n" id="difficulty">Difficulty</span></button>
+                <button class="bottom__nav difficulty" type="button"><b>&#x221e;</b> <span class="i18n" id="difficulty">Difficulty</span></button>
                 <div class="dropup__options">
                     <label class="description" for="piece__number__difficulty_slider"><span class="i18n" id="pieceNumber">Piece
                             number</span></label>

@@ -2,6 +2,7 @@ let locales = {
     en: {
         helpAbout: "About",
         helpMadeBy: "Made by",
+        helpMoreInfo: "More info",
         helpDescribePlay: "Starts the game. A new game can be started by either loading a image from the local storage, or by using an URL.",
         helpDescribeSolvePiece: "Moves a randomly selected puzzle piece to its final location.",
         helpDescribeLoad: "Resume a game from a previously saved state.",
