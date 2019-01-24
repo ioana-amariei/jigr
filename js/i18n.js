@@ -3,6 +3,8 @@ let locales = {
         helpAbout: "About",
         helpMadeBy: "Made by",
         helpMoreInfo: "More info",
+        helpMoreInfoUserGuide: "User guide",
+        helpMoreInfoTechReport: "Technical report",
         helpDescribePlay: "Starts the game. A new game can be started by either loading a image from the local storage, or by using an URL.",
         helpDescribeSolvePiece: "Moves a randomly selected puzzle piece to its final location.",
         helpDescribeLoad: "Resume a game from a previously saved state.",
@@ -37,6 +39,9 @@ let locales = {
     ro: {
         helpAbout: "Despre",
         helpMadeBy: "Dezvoltat de",
+        helpMoreInfo: "Mai multe informații",
+        helpMoreInfoUserGuide: "Ghidul utilizatorului",
+        helpMoreInfoTechReport: "Raport tehnic",
         helpPlay: "Joaca",
         helpReset: "Reseteaza",
         helpSave: "Salveaza",
@@ -72,6 +77,9 @@ let locales = {
     ru: {
         helpAbout: "О проекте",
         helpMadeBy: "Разработано",
+        helpMoreInfo: "Дополнительная информация",
+        helpMoreInfoUserGuide: "Руководство пользователя",
+        helpMoreInfoTechReport: "Технический отчет",
         helpPlay: "Играть",
         helpReset: "Сброс",
         helpSave: "Сохранить",
@@ -107,6 +115,9 @@ let locales = {
     fr: {
         helpAbout: "À propos", 
         helpMadeBy: "Faite par",
+        helpMoreInfo: "Plus d'infos",
+        helpMoreInfoUserGuide: "Guide de l'utilisateur",
+        helpMoreInfoTechReport: "Rapport technique",
         helpPlay: "Jouer",
         helpReset: "Réinitialiser",
         helpSave: "enregistrer",
