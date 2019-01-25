@@ -177,7 +177,6 @@ class Game {
         document.onkeypress = function (event) { self.toggleDisplayHelperImageWithSolvedPuzzle(event); };
 
         document.getElementById('random__option').addEventListener('click', onRandomSelectedEventHandler, false);
-        // document.getElementById('currentlySelected').addEventListener('click', onCurrentlySelectedEventHandler, false);
 
         let onSave = ((document.ontouchstart !== null) ? 'mousedown' : 'touchstart');
         document.getElementById('save__option').addEventListener(onSave, onSaveEventHandler, false);

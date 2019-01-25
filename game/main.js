@@ -82,6 +82,10 @@ function onMoveEventHandler(event) {
 }
 
 function onResetEventHandler() {
+    if (game.isOver()) {
+        return;
+    }
+    
     game.pieces = [];
     game.solvedPieces = [];
     game.progress = 0;
@@ -97,9 +101,10 @@ function onResetEventHandler() {
 
 // https://stackoverflow.com/questions/5915096/get-random-item-from-javascript-array
 function onRandomSelectedEventHandler() {
-    if (game.pieces.length === 0) {
+    if (game.isOver()) {
         return;
     }
+
     let randomIndex = Math.floor(Math.random() * game.pieces.length);
     let piece = game.pieces[randomIndex];
     piece.moveToFinalLocation();
