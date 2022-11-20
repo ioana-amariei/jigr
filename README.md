@@ -1,7 +1,10 @@
-# jigr (Jigsaw Web Manager)
-Play the game: https://ioanabirsan.github.io/jigr/
+# jigr (Jigsaw Web Manager) 
 
-**`project, infoiasi, cliw, web`**
+### Play the game
+
+- https://ioanabirsan.github.io/jigr/
+
+
 
 ### Project Documentation
 * Technical Report: https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/technical-report.html
@@ -33,3 +36,6 @@ Play the game: https://ioanabirsan.github.io/jigr/
 - http://gavmac.github.io/jigsaw/
 - https://codepen.io/dearsaif/pen/mOjbLK
 - https://github.com/mlcheng/js-toast
+
+
+**`project, infoiasi, cliw, web`**
