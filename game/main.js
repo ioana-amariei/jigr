@@ -221,4 +221,5 @@ if (savedGame !== null && savedGame !== 'undefined') {
     resumeFromSavedGame(savedGame);
 } else {
     document.getElementById('load__url').value = "https://raw.githubusercontent.com/ioanabirsan/jigr/master/images/start-image-puzzle-aufzug-20.jpg";
+    loadUrl.dispatchEvent(new Event("input"));
 }
