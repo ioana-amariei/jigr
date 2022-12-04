@@ -219,4 +219,6 @@ if (savedGame !== null && savedGame !== 'undefined') {
     let message = locales[locale].resumeGameMessage;
     iqwerty.toast.Toast(message, options);
     resumeFromSavedGame(savedGame);
+} else {
+    document.getElementById('load__url').value = "https://raw.githubusercontent.com/ioanabirsan/jigr/master/images/start-image-puzzle-aufzug-20.jpg";
 }
