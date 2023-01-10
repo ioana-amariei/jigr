@@ -1,10 +1,11 @@
 # jigr (Jigsaw Web Manager) 
 
+### Introduction
+Developed a client side Web application that allows solving puzzles defined by users. Each player is able to select – locally or remotely via a URL – an image that will be cropped at runtime into fragments as complicated as possible. The pieces will be mixed, the shifts / swings can be performed via drag & drop operations. The application also provides support for snap placement in the right area. The current status of each puzzle can be saved locally with the possibility of subsequent restoration. 
+
 ### Play the game
 
 - https://ioanabirsan.github.io/jigr/
-
-
 
 ### Project Documentation
 * Technical Report: https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/technical-report.html
