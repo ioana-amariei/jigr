@@ -5,7 +5,7 @@ Developed a client side Web application that allows solving puzzles defined by u
 
 ### Play the game
 
-- https://ioanabirsan.github.io/jigr/
+- https://ioana-amariei.github.io/jigr/
 
 ### Project Documentation
 * Technical Report: https://htmlpreview.github.io/?https://github.com/ioanabirsan/jigr/blob/master/docs/technical-report.html
